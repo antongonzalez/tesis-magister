@@ -1,0 +1,38 @@
+\chapter{Notación y convenciones}
+\label{ape:convenciones}
+
+En el desarrollo de la presente tesis se utilizó el siguiente conjunto de notaciones y convenciones:
+
+\begin{itemize}
+\item Las coordenadas de los elementos se denotan como $x^{\mu}=\left( x^0, x^1, x^2, x^3 \right)$, donde $x^0$ corresponde a la coordenada temporal.
+\item Usamos la convención $\eta_{\mu \nu} = \mathrm{diag}(1,-1,-1,-1)$.
+\item $\epsilon_{\mu \nu \rho \sigma}$ denota el pseudo-tensor totalmente antisimétrico de Levi-Civita definido como $\epsilon_{0123}=-1$ y tal que $\epsilon^{\mu \nu \rho \sigma} := g^{\mu \alpha} g^{\nu \beta} g^{\rho \gamma} g^{\sigma \delta} \epsilon_{\alpha \beta \gamma \delta}$.
+\item Usamos letras del alfabeto griego $\mu, \nu, \rho, \dots$ para referirnos a índices espaciotemporales 4-dimensionales que varían de 0 a 3, y letras del abecedario latino $i, j, k, \dots$ para referirnos a índices espaciales que varían de 1 a 3.
+\item Se utiliza la convención de suma de Einstein, es decir, cuando dos índices se encuentra repetidos en el mismo término, existe una sumatoria de 0 a 3 o de 1 a 3 dependiendo si son índices del alfabeto griego o latino.
+\item Se utilizan unidades gausiannas\footnote{\url{https://en.wikipedia.org/wiki/Gaussian_units}} con $c=1$.
+\item Las derivadas parciales son $\partial_{\mu} := \partial / \partial x^{\mu}$.
+\item Los símbolos de Christoffel de segunda especie están definidos como
+\begin{equation}
+\Gamma^{\mu}_{\rho \sigma} := \frac{1}{2} g^{\mu \gamma} \left( \partial_{\rho} g_{\gamma \sigma} + \partial_{\sigma} g_{\gamma \rho} - \partial_{\gamma} g_{\rho \sigma} \right).
+\end{equation}
+\item El tensor de curvatura de Riemann definido como 
+\begin{equation}
+R^{\alpha}_{\ \beta \mu \nu} = \partial_{\mu} \Gamma^{\alpha}_{\beta \nu} - \partial_{\nu} \Gamma^{\alpha}_{\beta \mu} + \Gamma^{\alpha}_{\delta \mu} \Gamma^{\delta}_{\beta \nu} - \Gamma^{\alpha}_{\delta \nu} \Gamma^{\delta}_{\beta \mu}.
+\end{equation}
+\item El tensor de Ricci está definido como
+\begin{equation}
+R_{\mu \nu} := g^{\alpha \beta} R_{\alpha \mu \beta \nu}.
+\end{equation}
+\item El escalar de curvatura está definido como 
+\begin{equation}
+R := g^{\mu \nu} R_{\mu \nu}.
+\end{equation}
+\item La densidad tensorial de energía-momentum $\tilde{T}^{\mu \nu}$ se define como un tensor de rango $\left(^2_0 \right)$ y peso $-1$, es decir que transforma bajo transformaciones generales de coordenadas como 
+\begin{equation}
+\tilde{T}^{'\mu \nu} =  \frac{\partial x^{\mu}}{\partial x^{\alpha}} \frac{\partial x^{\nu}}{\partial x^{\beta}} \tilde{T}^{\alpha \beta} | J |^{-1},
+\end{equation}
+donde $J$ es la matriz jacobiana, y tal que
+\begin{equation}
+\tilde{T}^{\mu \nu} := \sqrt{-g} T^{\mu \nu}.
+\end{equation}
+\end{itemize}

@@ -1,0 +1,407 @@
+\chapter{Analogía entre Relatividad General y la Teoría Electrodinámica Clásica}
+\label{cap:3}
+\newpage
+
+\section{¿Porqué es importante el estudio de analogías en Física?}
+\label{sec:4}
+%SE PRESENTA UNA PEQUEÑA SECCIÓN DONDE SE MUESTRAN EJEMPLOS CONCRETOS DONDE EL ESTUDIO DE ANALOGÍAS EN FÍSICA HAN SERVIDO PARA DESAROLLAR/ENTENDER NUEVAS TEORÍAS
+
+
+Antes de comenzar a hablar de analogías, debemos definir cómo entendemos una analogía en Física. Usualmente, usamos la palabra analogía cuando establecemos una relación entre dos cosas diferentes que en principio no tienen una conexión. Por ejemplo, la pintura es al pincel, lo que la música a los instrumentos\footnote{\url{https://www.ejemplos.co/20-ejemplos-de-analogias/ixzz5rKGc08QO}}.
+
+De la misma forma, en el contexto físico podemos hacer algo similar si logramos construir una relación entre dos teorías diferentes como, por ejemplo, entre la teoría de la Relatividad General y la teoría de la Electrodinámica Clásica. Sin embargo, esa no es la única analogía existente.
+
+
+En mecánica, los sistemas físicos que no poseen elementos con rotación (es decir, puramente traslacionales) pueden ser descritos completamente por medio de cantidades ya definidas como la masa $m$, fuerza $\vb{F}$, momentum lineal $\vb{p}$, posición $\vb{x}$, velocidad $\vb{v}$ y aceleración $\vb{a}$. No obstante, si estamos interesados en considerar los efectos de rotación en esos sistemas es útil introducir cantidades adicionales para poder describir el sistema, tales como el momento de inercia $I$, torque $\vb{\tau}$, el momentum angular $\vb{L}$, la posición angular $\theta$, la velocidad angular $\vb{\omega}$ y la aceleración angular $\vb{\alpha}$.
+
+Como podemos notar (y si bien es cierto que las definiciones de dichas cantidades son diferentes) la interpretación a cada una de ellas es muy similar, de tal forma que podemos establecer una relación entre ellas a partir de su significado, como muestra la siguiente tabla.
+\begin{center}
+\begin{tabular}{c|c|l}
+\hline
+Caso traslacional & Caso rotacional & Magnitud\\
+\hline \hline
+$m$ & $I$ & Efectos de inercia \\
+\hline
+$\vb{p}$ & $\vb{L}$  & Cantidad de movimiento y rotación \\
+\hline
+$\vb{F}$ & $\vb{\tau}$ & Agentes externos actuando sobre el sistema \\
+\hline
+$\vb{x}$ & $\theta$ & Posición \\
+\hline
+$\vb{v}$ & $\vb{\omega}$ & Velocidad \\
+\hline
+$\vb{a}$ & $\vb{\alpha}$ & Aceleración\\
+\hline
+\end{tabular}
+\end{center}
+
+Y así, para cada cantidad en el caso traslacional hay una cantidad asociada en el caso rotacional. Pero ésa no es la única relación entre los elementos que describen los sistemas físicos en los casos traslacionales y rotantes, incluso las ecuaciones que describen esos sistemas son similares. Para los elementos en el caso traslacional, la ecuación principal para describirlos es la segunda ley de Newton
+\begin{equation}
+\sum_i \vb{F}_i = \dv{\vb{p}}{t},
+\end{equation}
+la cual nos dice que una variación temporal de la cantidad de movimiento es producto de los agentes externos que actúan en nuestro sistema. 
+
+Y para sistemas rotantes, la ecuación principal para describirlos es
+\begin{equation}
+\sum_i \vb{\tau}_i = \dv{\vb{L}}{t},
+\end{equation}
+y equivalentemente al caso de movimiento traslacional, una variación temporal de la cantidad de rotación es igual al valor resultante de los agentes externos que actúan en nuestro sistema.
+
+Muy a menudo, el estudio de sistemas que solo involucran elementos traslacionales es más fácil de entender que cuando se intentan estudiar sistemas con rotación, es por esto que la utilidad de esta analogía entre sistemas traslacionales y rotacionales nos puede permitir comprender sistemas más complejos. 
+
+Este es el ejemplo más simple sobre el porqué una analogía puede ayudarnos a entender problemas más complicados en física.
+
+\section{Tensores de marea}
+Como se ha mencionado en las secciones anteriores, los elementos denominados fuerzas de marea son usados para describir los efectos de las inhomogeneidades de los campos. Podemos definir los tensores de marea para poder describir dichas fuerzas, por ejemplo en el caso newtoniano si definimos
+\begin{equation}
+K_{ij} (x) := - \partial_j g_i(x),
+\end{equation}
+las fuerzas de marea \eqref{eq:122} pueden ser escritas como
+\begin{equation}
+\dv[2]{ }{t}\delta x_i = -K_{ij}\delta x_j,
+\end{equation}
+donde $K_{ij}$ es el tensor de marea asociado.
+
+En la teoría electromagnética y Relatividad General se puede hacer una definición similar, definidos los \textit{tensores de marea eléctricos y gravito-eléctricos} respectivamente como
+\begin{equation}
+\label{eq:50}
+\mathtt{E}_{\mu \nu} := \left( \partial_{\nu} F_{\mu \gamma} \right) u^{\gamma}, \quad 
+\mathrm{y } \quad \mathbb{E}_{\mu \nu} := R_{\mu \rho \nu \sigma} u^{\rho} u^{\sigma}.
+\end{equation}
+lo cual permite reescribir \eqref{eq:6} y \eqref{eq:17} de la siguiente forma:
+\begin{equation}
+\label{eq:130}
+\dv[2]{ }{\s} \delta x_{\mu} = \frac{q}{m} \mathtt{E}_{\mu \nu} \ \delta x^{\nu}
+,\qquad
+\frac{\delta^2}{\mathrm{ds}^2} \delta x_{\mu} = - \mathbb{E}_{\mu \nu} \ \delta x^{\nu}.
+\end{equation}
+
+También se pueden definir sus contrapartes magnéticas como
+\begin{equation}
+\label{eq:51}
+\mathtt{B}_{\mu \nu} := \frac{1}{2} \epsilon_{\gamma \lambda \mu \alpha} \left( \partial_{\nu} F^{\gamma \lambda} \right) u^{\alpha}
+,\quad \mathrm{y} \quad
+\mathbb{H}_{\mu \nu} := \frac{1}{2} \epsilon_{\gamma \lambda \mu \alpha} R^{\gamma \lambda}_{\ \ \nu \sigma} u^{\alpha} u^{\sigma},
+\end{equation}
+a las cuales nos referiremos como \textit{tensor de marea magnético} y \textit{tensor de marea gravito-magnético}.
+
+La analogía propuesta en \cite{Costa-Herdeiro} pretende discutir cómo los efectos de las fuerzas de marea en los contextos gravitacionales y electromagéticos pueden ser comparados usando los tensores de marea.
+
+Por otro lado, a partir de las definiciones de los tensores de marea podemos notar que es necesario conocer las derivadas del tensor de Faraday y el tensor de Riemann para construirlos. No obstante, también es posible obtener dichas cantidades si conocemos con anterioridad los tensores de marea, es decir, obtener una transformación inversa (ver Apéndice \ref{ape:4}). Ésta es
+\begin{align}
+\label{eq:52}
+\partial_{\gamma} F_{\mu \nu} &= \epsilon_{\mu \nu \rho \sigma} \mathit{B}^{\rho}_{\ \gamma} u^{\sigma} - 2u_{[\mu} \mathit{E}_{\nu] \gamma},\\
+\label{eq:53}
+R_{\mu \nu \gamma \xi} u^{\xi} &= \epsilon_{\mu \nu \rho \sigma} \mathbb{H}^{\rho}_{\ \gamma} u^{\sigma} - 2u_{[\mu} \mathbb{E}_{\nu] \gamma}.
+\end{align}
+
+Note que el vector $u^{\mu}$ en \eqref{eq:50} y \eqref{eq:51} puede ser, en principio, una 4-velocidad arbitraria. Sin embargo, para reescribir \eqref{eq:130} ésta coincidir con la 4-velocidad de la trayectoria de referencia fijada para obtener la ecuación de desvío.  
+
+\section{Ecuaciones de Maxwell}
+
+Usando las definiciones \eqref{eq:50} y \eqref{eq:51} se puede obtener una forma alternativa de las ecuaciones de Maxwell \eqref{eq:1} y \eqref{eq:2}.
+
+En particular, si calculamos la traza del tensor de marea eléctrico, encontramos que
+\begin{equation}
+\label{eq:54}
+\mathtt{E}^{\mu}_{\ \mu} = \left( \partial_{\mu} F^{\mu}_{\ \nu} \right) u^{\nu}.
+\end{equation}
+
+Y reemplazando \eqref{eq:1} en \eqref{eq:54} obtenemos que
+\begin{equation}
+\mathtt{E}^{\mu}_{\ \mu} = 4\pi J^{\mu} u_{\mu} = 4\pi \rho_0,
+\end{equation}
+donde $\rho_0 := \rho / \gamma$ es la densidad de carga respecto a un observador co-móvil con la distribución.
+
+Si hacemos lo mismo con la contraparte magnética, encontramos que de \eqref{eq:2} es fácil ver que
+\begin{equation}
+\mathtt{B}^{\mu}_{\ \mu} = 0.
+\end{equation}
+
+Por otro lado, si calculamos la parte antisimétrica del tensor eléctrico de mareas se tiene que
+\begin{equation}
+\mathtt{E}_{[\mu \nu]} = \frac{1}{2} \left( \mathtt{E}_{\mu \nu} - \mathtt{E}_{\nu \mu} \right)
+= \frac{1}{2} \left( \partial_{\nu} F_{\mu \gamma} - \partial_{\mu} F_{\nu \gamma} \right) u^{\gamma}.
+\end{equation}
+
+Y de \eqref{eq:2} se obtiene
+\begin{equation}
+\label{eq:55}
+\mathtt{E}_{[\mu \nu]} = \frac{1}{2} \left( \partial_{\gamma} F_{\mu \nu} \right) u^{\gamma}.
+\end{equation}
+
+Finalmente, de \eqref{eq:1}, encontramos que
+\begin{align}
+4 \pi \epsilon_{\mu \nu \rho \sigma} J^{\rho} u^{\sigma} 
+&= \epsilon_{\mu \nu \rho \sigma} \left( \partial_{\gamma} F^{\gamma \rho} \right) u^{\sigma} \nonumber \\
+&= -\frac{1}{2} \epsilon_{\mu \nu \rho \sigma} \epsilon^{\gamma \rho \alpha \beta} \left( \partial_{\gamma} \dual{F}_{\alpha \beta} \right) u^{\sigma} \nonumber \\
+&= 2\mathtt{B}_{[\nu \mu]} + \partial_{\gamma} \dual{F}_{\mu \nu} u^{\gamma},
+\end{align}
+que es
+\begin{equation}
+\mathtt{B}_{[\mu \nu]} = \frac{1}{2} \left( \partial_{\gamma} \dual{F}_{\mu \nu} \right) u^{\gamma} - 2 \pi \epsilon_{\mu \nu \rho \sigma} J^{\rho} u^{\sigma}.
+\end{equation}
+
+De esta forma se deducen 4 ecuaciones que satisfacen los tensores de marea
+\begin{align}
+\label{eq:maxwell1}
+\mathtt{E}^{\mu}_{\ \mu} &= 4 \pi \rho_0,\\
+\label{eq:maxwell2}
+\mathtt{B}^{\mu}_{\ \mu} &= 0,\\
+\label{eq:maxwell3}
+\mathtt{E}_{[\mu \nu]} &= \frac{1}{2} \partial_{\gamma} F_{\mu \nu} u^{\gamma},\\
+\label{eq:maxwell4}
+\mathtt{B}_{[\mu \nu]} &= \frac{1}{2}\partial_{\gamma} \dual{F}_{\mu \nu} u^{\gamma} - 2 \pi \epsilon_{\mu \nu \rho \sigma} J^{\rho} u^{\sigma}.
+\end{align}
+
+Podemos verificar que dichas ecuaciones se reducen a las ecuaciones de Maxwell usuales para el caso particular de un observador con 4-velocidad $u^{\mu} = \delta^{\mu}_{\ 0}$, es decir, en reposo respecto a un observador inercial.
+
+\section{Forma de ``Maxwell" para las ecuaciones de campo gravitacional}
+
+Se puede proceder de una forma similar en Relatividad General, esta vez considerando las ecuaciones de campo de Einstein y las propiedades del tensor de Riemann. 
+
+Primero, de \eqref{eq:7} sabemos que
+\begin{equation}
+\label{eq:56}
+R = 8 \pi T^{\mu}_{\ \mu},
+\end{equation}
+y entonces
+\begin{equation}
+\label{eq:57}
+R_{\mu \nu} = 8 \pi \left[ T_{\mu \nu} - \frac{1}{2} g_{\mu \nu} T^{\rho}_{\ \rho} \right].
+\end{equation}
+
+Si reemplazamos \eqref{eq:57} en la traza de \eqref{eq:50} podemos ver que
+\begin{equation}
+\label{eq:58}
+\mathbb{E}^{\mu}_{\  \mu} = 8 \pi \left[ T_{\mu \nu} - \frac{1}{2} g_{\mu \nu} T^{\rho}_{\ \rho} \right]u^{\mu} u^{\nu}.
+\end{equation}
+
+Definiendo la densidad propia de masa como
+\begin{equation}
+\rho_{\mathrm{m}} := T_{\mu \nu} u^{\mu} u^{\nu},
+\end{equation}
+es decir, la densidad de masa para un observador con 4-velocidad $u^{\mu}$, la ecuación \eqref{eq:58} se convierte en
+\begin{equation}
+\mathbb{E}^{\mu}_{\ \mu} = 4 \pi \left[ 2\rho_{\mathrm{m}} - T^{\rho}_{\ \rho} \right].
+\end{equation}
+
+Haciendo lo mismo para su contraparte magnética, y usando las identidades de Bianchi para el tensor de Riemann es inmediato ver que
+\begin{equation}
+\mathbb{H}^{\mu}_{\ \mu} = 0.
+\end{equation} 
+
+Por otra parte y como se hizo en el caso electromagnético, si calculamos la parte antisimétrica de 
+\eqref{eq:50} y usamos de nuevo las identidades de Bianchi es fácil probar que
+\begin{equation}
+\label{eq:59}
+\mathbb{E}_{[\mu \nu]} = 0.
+\end{equation}
+
+Finalmente, si definimos $J^{\mu} := T^{\mu}_{\ \nu} u^{\nu}$ como la densidad de corriente de masa con respecto a observador con 4-velocidad $u^{\mu}$, entonces
+\begin{align}
+\nonumber
+4 \pi \epsilon_{\mu \nu \rho \sigma} J^{\rho} u^{\sigma} &= 4 \pi \epsilon_{\mu \nu \rho \sigma} T^{\rho}_{\ \lambda} u^{\lambda} u^{\sigma} \\
+\nonumber
+&= - \frac{4 \pi}{8 \pi} \epsilon_{\mu \nu \sigma \rho} \left[ R^{\sigma}_{\ \lambda} - \frac{1}{2}
+\delta^{\sigma}_{\ \lambda} R \right] u^{\lambda} u^{\rho} \\
+\nonumber
+&= - \frac{1}{2} \epsilon_{\mu \nu \sigma \rho} R^{\delta \sigma}_{\ \ \delta \lambda} u^{\lambda} u^{\rho}.
+\end{align}
+
+Escribiendo el tensor de Riemann en términos de su contraparte dual, es decir
+\begin{equation}
+R_{\mu \nu \gamma \delta} = -\frac{1}{2} \epsilon_{\alpha \beta \mu \nu} \dual{R}^{\alpha \beta}_{\ \ \gamma \delta},
+\end{equation} 
+tenemos que
+\begin{equation}
+\mathbb{H}_{[\mu \nu]} = -4 \pi \epsilon_{\mu \nu \rho \sigma} J^{\rho} u^{\sigma}.
+\end{equation}
+
+De esta forma obtenemos un conjunto de 4 ecuaciones que satisfacen los tensores de marea, análogas a las encontradas en el apartado anterior
+\begin{align}
+\label{eq:gmaxwell1}
+\mathbb{E}^{\mu}_{\ \mu} &= 4 \pi \left[ 2\rho_{\mathrm{m}} - T^{\rho}_{\ \rho} \right],\\
+\label{eq:gmaxwell2}
+\mathbb{H}^{\mu}_{\ \mu} &= 0,\\
+\label{eq:gmaxwell3}
+\mathbb{E}_{[\mu \nu]} &= 0,\\
+\label{eq:gmaxwell4}
+\mathbb{H}_{[\mu \nu]} &= -4 \pi \epsilon_{\mu \nu \rho \sigma} J^{\rho} u^{\sigma}.
+\end{align}
+
+Es importante destacar que como las definiciones de los tensores de marea, ya sea en el caso gravitacional o en el caso electromagnético, son independientes de la 4-velocidad $u^{\mu}$. Las ecuaciones (\ref{eq:maxwell1}-\ref{eq:maxwell4}) y (\ref{eq:gmaxwell1}-\ref{eq:gmaxwell4}) también son independientes de la 4-velocidad $u^{\mu}$. Es importante mencionar este hecho puesto que dicha arbitrariedad en la elección de $u^{\mu}$ está ligada a la arbitrariedad del centro de masa de la distribución a estudiar y, como comúnmente se trabaja en Física, dicha arbitrariedad nos permite hacer una elección del centro de masa tal que las ecuaciones a trabajar se simplifiquen al punto de que sean más fáciles de estudiar.
+
+\section{Primera comparación}
+
+Podemos estudiar la validez de esta analogía utilizando la definición del 4-potencial electromagnético y perturbaciones hasta primer orden de la métrica plana para el caso gravitacional.
+
+De \eqref{eq:50} podemos ver que
+\begin{align}
+\mathtt{E}_{00} &= (\ddot{A}_i - \partial_i \dot{\phi})u^i, \\
+\mathtt{E}_{0i} &= (\partial_i \dot{A}_j - \partial_i \partial_j \phi) u^j,\\
+\mathtt{E}_{i0} &= (\partial_i \dot{\phi} - \ddot{A}_i) u^0 + \partial_i \dot{A}_j u^j - \partial_j \dot{A}_i u^j,\\
+\mathtt{E}_{ij} &= (\partial_i \partial_j \phi - \partial_j \dot{A}_i)u^0 + (\partial_i \partial_j A_k - \partial_j \partial_k A_i)u^k.
+\end{align}
+
+Además, de \eqref{eq:51} encontramos que
+\begin{align}
+\mathtt{B}_{00} &= \epsilon_{ijk}u^i \partial^j \dot{A}^k, \\
+\mathtt{B}_{i0} &= \epsilon_{jki}u^0 \partial^j\dot{A}^k + (\ddot{A}^k - \partial^k \dot{\phi}) \epsilon_{kij}u^j, \\
+\mathtt{B}_{0i} &= \epsilon_{kjl}\partial_i \partial^k A^j u^l, \\
+\mathtt{B}_{ij} &= \epsilon_{lki}\partial_j \partial^l A^k u^0 + \epsilon_{kil}\partial_j \dot{A}^k u^l
+- \epsilon_{kil} u^l \partial_j \partial^k \phi.
+\end{align}
+
+Teniendo así las expresiones para los tensores de marea eléctricos y magnéticos. Por otro lado, en el caso en Relatividad General si consideremos una perturbación a primer orden de la métrica plana, de \eqref{eq:85} tenemos que el tensor de Riemann hasta primer orden es
+\begin{equation}
+R^{\rho}_{\ \mu \nu \lambda} = \frac{1}{2} \left[ \partial_{\mu} \partial_{\nu} h^{\rho}_{\ \lambda} - \partial_{\mu} \partial_{\lambda} h^{\rho}_{\ \nu} + \partial_{\lambda} \partial^{\rho} h_{\mu \nu} - \partial_{\nu} \partial^{\rho} h_{\mu \lambda} \right],
+\end{equation}
+que nos lleva a escribir el tensor de marea gravito-eléctrico como
+\begin{equation}
+\mathbb{E}^{\mu}_{\ \nu} = \frac{1}{2} \left[ \partial_{\rho} \partial_{\nu} h^{\mu}_{\ \sigma} - \partial_{\rho} \partial_{\sigma} h^{\mu}_{\ \nu} + \partial_{\sigma} \partial^{\mu} h_{\nu \rho} - \partial_{\nu} \partial^{\mu} h_{\rho \sigma} \right] u^{\rho} u^{\sigma},
+\end{equation}
+lo que, al separar por componentes es
+\begin{align}
+\mathbb{E}^0_{\ 0} &= \frac{1}{2} \left[ 2 \partial_i \dot{h}^0_{\ j} - \partial_i \partial_j h^0_{\ 0} - h_{ij} \right] u^i u^j,\\
+\nonumber
+\mathbb{E}_{i0} &= \frac{1}{2} \left[ \partial_m \dot{h}_{in} - \partial_m \partial_n h_{i0} + \partial_n \partial_i h_{m0} - \partial_i \dot{h}_{mn} \right] u^m u^n \\
+& \quad + \frac{1}{2} \left[ \ddot{h}_{i0} - \partial_m \dot{h}_{i0} + \partial_m \partial_i h_{00} - \partial_i 
+\dot{h}_{0m} \right] u^0 u^m, \\
+\nonumber
+\mathbb{E}_{ij} &= \frac{1}{2} \left[ \partial_j \dot{h}_{i0} - \ddot{h}_{ij} + \partial_i \dot{h}_{0j} - \partial_j \partial_i h_{00} \right] u^0 u^0 \\
+\nonumber
+& \quad + \frac{1}{2} \left[ \partial_k \partial_l h_{ij} + \partial_l \partial_i h_{kj} - \partial_i \partial_j h_{kl} \right] u^k u^l\\
+\nonumber
+& \quad + \frac{1}{2} \left[ \partial_j \dot{h}_{ik} + \partial_k \partial_j h_{i0}) + \partial_k \partial_i h_{0j} + \partial_i \dot{h}_{jk} \right] u^k u^0\\
+& \quad - \left[ \partial_k h_{ij} + \partial_i \partial_j h_{0k} \right] u^0 u^k.
+\end{align}
+
+Haciendo lo mismo para el tensor de marea gravito-magnético tenemos que
+\begin{equation}
+\mathbb{H}^{\mu}_{\ \nu} = \frac{1}{4} \epsilon^{\gamma \lambda \mu \delta} \left[ \partial_{\lambda} \partial_{\nu} h_{\gamma \sigma} - \partial_{\lambda} \partial_{\sigma} h_{\gamma \nu} + \partial_{\sigma} \partial_{\gamma} h_{\lambda \nu} - \partial_{\nu} \partial_{\gamma} h_{\lambda \sigma} \right] u_{\delta} u^{\sigma},
+\end{equation} 
+y así
+\begin{align}
+\mathbb{H}^{0}_{\ 0} &= \frac{1}{4} \epsilon^{ijk} \left[ \partial_j \dot{h}_{il} - \partial_{j} \partial_l h_{i0} + \partial_l \partial_i h_{j0} -  \partial_i h_{jl} \right] u_k u^l, \\
+\nonumber
+\mathbb{H}^{i}_{\ 0} &= \frac{1}{2} \epsilon^{ijk} \left[ \partial_k \dot{h}_{0l} - \partial_k \partial_l h_{00} + \partial_l \dot{h}_{k0} - \ddot{h}_{kl} \right] u_j u^l \\
+& \quad + \frac{1}{2} \epsilon^{ijk} \left[ \partial_j h_{kl} - \partial_j \partial_l h_{k0} \right],\\
+\nonumber
+\mathbb{H}^{0}_{\ i} &= \frac{1}{4} \epsilon^{jlk} \left[ \partial_l \partial_i h_{jm} - \partial_l \partial_m h_{ij} + \partial_j \partial_m h_{li} - \partial_i \partial_j h_{lm} \right] u_k u^m \\
+& \quad + \frac{1}{2} \epsilon^{jlk} \left[ \partial_l \partial_i h_{j0} - \partial_l \dot{h}_{ji} \right] u^k u^0,\\
+\nonumber
+\mathbb{H}^{i}_{\ j} &= \frac{1}{2} \epsilon^{inm} \left[ \partial_j \partial_m h_{0k} + \partial_k \dot{h}_{mj} - \partial_j \dot{h}_{mk} - \partial_k \partial_m h_{0j} \right] u^n u^k \\
+\nonumber
+& \quad + \frac{1}{2} \epsilon^{imn} \left[ \partial_j \partial_m h_{n0} + \partial_n \dot{h}_{mj} \right] u_0 u^0 
++ \frac{1}{2} \epsilon^{imn} \left[ \partial_j \partial_m h_{nk} + \partial_k \partial_n h_{mj} \right]
+u_0 u^k \\
+& \quad - \frac{1}{2} \epsilon^{imn} \left[ \partial_j \partial_m h_{00} \ddot{h}_{mj} - \partial_j \dot{h}_{m0} - \partial_m \dot{h}_{0j} \right] u_n u^0.
+\end{align}
+
+Como podemos ver las componentes de los tensores de marea electromagnéticos son, en general, muy diferentes de los tensores de marea en GR. Sin embargo, si asumimos el caso particular cuando el 4-potencial electromagnético y la perturbaciones son independientes del tiempo, para un observador estático (es decir $u^{\mu} = \delta^{\mu}_{\ 0}$) los tensores de marea en RG se reducen a
+\begin{equation}
+\label{eq:60}
+\mathbb{E}_{ij} = - \partial_i \partial_j h_{00}, \qquad \mathbb{H}_{ij} = \frac{1}{2} \epsilon^{imn} \partial_j \partial_m h_{n0},
+\end{equation}
+y en electromagnetismo
+\begin{equation}
+\label{eq:61}
+\mathtt{E}_{ij} = \partial_i \partial_j \phi, \qquad \mathtt{B}_{ij} = \epsilon_{lki} \partial_j \partial^l A^k. 
+\end{equation}
+
+Es claro ver la similitud entre \eqref{eq:60} y \eqref{eq:61}, dándonos así a entender que cuando consideramos problemas independientes del tiempo y observadores estáticos, las ecuaciones en electromagnetismo y en Relatividad General sean muy similares. Obviamente esto es hasta primer orden en $G$, si deseamos considerar órdenes superiores entonces esta similitud entre los tensores de marea podría no ocurrir.
+
+\section{Partículas con espín}
+
+\subsection{Orden dipolar}
+\label{sec:3.6.1}
+
+Como vimos anteriormente, las ecuaciones de movimiento hasta el orden dipolar en RG vienen dadas por \eqref{eq:82} y \eqref{eq:103}. Mientras que en el contexto electromagnético expandimos \eqref{eq:111} y \eqref{eq:112} para un dipolo magnético, obteniendo que
+\begin{align}
+\label{eq:64}
+\cd{p_{\mu}} &= \frac{1}{2} m^{\nu \lambda} \partial_{\mu} F_{\lambda \nu}, \\
+\label{eq:65}
+\cd{S^{\mu \nu}} &= 2 p^{[\mu} u^{\nu]} + 2 \eta^{\sigma [ \mu} m^{\nu ] \lambda} F_{\sigma \lambda}.
+\end{align}
+
+Si comparamos \eqref{eq:65} y \eqref{eq:103}, las cuales determinan la evolución del espín, podemos notar un término extra proporcional al momento dipolar en \eqref{eq:65}, lo que nos da a entender que la forma de la distribución a estudiar, en este caso un dipolo, influye en el contexto electromagnético a la evolución del espín. Esto no ocurre en las ecuaciones para el caso en RG, lo que nos da a entender que dicho efecto es propio del electromagnetismo.
+
+Por otro lado, si analizamos las ecuaciones que determinan la evolución del momentum, vemos que reemplazando \eqref{eq:52} y \eqref{eq:53} en \eqref{eq:82} y \eqref{eq:64} se obtiene que
+\begin{align}
+\cd{p_{\mu}}^{\mathrm{EM}} &= \frac{1}{2} \epsilon_{\lambda \nu \gamma \sigma} m^{\nu \lambda} \mathtt{B}^{\gamma}_{\ \ \mu} u^{\sigma} - m^{\nu \lambda} u_{[\lambda} \mathtt{E}_{\nu] \mu},\\
+\label{eq:66}
+\cd{p_{\mu}}^{\mathrm{G}} &= \frac{1}{2} \epsilon_{\gamma \sigma \xi \lambda} S^{\gamma \sigma} \mathbb{H}^{\xi}_{\ \ \mu} u^{\lambda} - S^{\gamma \sigma} u_{[\gamma} \mathbb{E}_{\sigma] \mu},
+\end{align}
+de donde se puede notar una perfecta correspondencia entre los tensores de marea, al igual que en el ejemplo mostrado al principio del capítulo en \ref{sec:4}. Donde podemos ver que el momento dipolar es el análogo al espín.
+
+\subsection{Orden cuadrupolar}
+
+Es natural preguntarse si ocurre lo mismo al orden siguiente. Si consideramos las ecuaciones que determinan la evolución del momentum extendidas hasta el orden cuadrupolar, de \eqref{eq:49} y \eqref{eq:111} se tiene que 
+\begin{align}
+\cd{p_{\mu}^{\mathrm{G}}} &= \frac{1}{2} u^{\lambda} S^{\alpha \beta} R_{\mu \lambda \alpha \beta} - \frac{1}{6} I^{\alpha \beta \lambda \nu} \nabla_{\mu} R_{\lambda \alpha \beta \nu}, \\
+\cd{p_{\mu}^{\mathrm{EM}}} &= \frac{1}{2} m^{\nu \lambda} \partial_{\mu} F_{\lambda \nu} + \frac{1}{3} m^{\alpha \beta \lambda} \partial_{\mu} \partial_{\beta} F_{\lambda \alpha},
+\end{align}
+las cuales pueden ser escritas usando los tensores de marea como
+\begin{align}
+\nonumber
+\cd{p_{\mu}^{\mathrm{G}}} &= \frac{1}{2} \epsilon_{\alpha \beta \sigma \xi} \mathbb{H}^{\xi}_{\ \mu} u^{\sigma} S^{\alpha \beta} - S^{\alpha \beta} u_{\alpha} \mathbb{E}_{\beta \mu} \\
+\nonumber
+& \quad - \frac{1}{6} I^{\alpha \beta \lambda \nu} u_{\beta} \nabla_{\mu} \epsilon_{\lambda \alpha \xi \sigma} \mathtt{H}^{\xi}_{\ \nu} u^{\sigma} - \frac{1}{3} I^{\alpha \beta \lambda \nu} u_{\beta} \nabla_{\mu}
+u_{[\lambda} \mathbb{E}_{\alpha ] \nu} \nonumber \\
+\label{eq:115}
+& \quad - \frac{1}{6} I^{\alpha \beta \lambda \nu} \nabla_{\mu} \bar{R}_{\lambda \alpha \beta \nu}, \\
+\cd{p_{\mu}^{\mathrm{EM}}} &= m^{\nu \lambda} u_{[ \mu} \mathtt{E}_{\lambda ] \nu} + \frac{1}{2} m^{\nu \lambda} \epsilon_{\mu \lambda \rho \delta} \mathtt{B}^{\delta}_{\ \nu} u^{\rho} \nonumber \\
+\label{eq:114}
+& \quad + \frac{2}{3} m^{\alpha \beta \lambda} \partial_{\beta} u_{[\mu} \mathtt{E_{\lambda]\nu}} + \frac{1}{3} m^{\alpha \beta \lambda} \partial_{\beta} \epsilon_{\mu \lambda \rho \delta} \mathtt{B}^{\delta}_{\ \nu} u^{\rho},
+\end{align}
+donde definimos
+\begin{equation}
+\bar{R}_{\mu \nu \rho \sigma} := R_{\mu \nu \rho \sigma} - R_{\mu \nu \xi \sigma} u^{\xi} u_{\rho}.
+\end{equation}
+
+En este orden se puede observar una clara diferencia entre ambas ecuaciones de evolución para el momentum. En el caso electromagnético podemos escribir las ecuaciones de movimiento en términos de los tensores de marea completamente, pero en el contexto de Relatividad General no es posible. Esto se debe a que las ecuaciones de movimiento dependen de todas las componentes del tensor de Riemann (a diferencia del caso dipolar en donde la dependencia era de las componentes del tensor de Riemann contraídas con la 4-velocidad). 
+
+Así, podemos separar el tensor de Riemann en dos partes, $R_{\mu \nu \xi \sigma} u^{\xi} u_{\rho}$ que preserva la analogía puesto que puede ser reescrito completamente en términos de los tensores de marea, y $\bar{R}_{\mu \nu \rho \sigma}$ que no puede ser reescrito en términos de los tensores de marea.
+
+No hay razones para esperar se cumpla la perfecta correspondencia entre los términos dipolares a ordenes superiores.
+
+\section{¿Cuáles son las diferencias entre Relatividad General y la teoría Electromagética clásica?}
+
+La formulación covariante de la Electrodinámica permite reescribir las ecuaciones ya conocidas del Electromagnetismo introduciendo los principios de la Relatividad Especial. La teoría de la Relatividad General es una extensión de Relatividad Especial a fin de introducir la interacción gravitacional en ésta.
+
+Ambas teorías permiten describir de forma precisa los efectos que en ellas ocurren, y obviando que masa y carga eléctrica son propiedades distintas e independientes de la materia, hemos visto que el comportamiento de ambas es muy similar haciéndonos preguntar ¿qué diferencia sustancial tienen?, no desde un punto de vista de las ecuaciones como vimos anteriormente, si no desde un punto de vista fundamental.
+
+Las principales diferencias que puedo mencionar entre ambas teorías son tres:
+\begin{itemize}
+\item[-] Los efectos de inducción electromagnética.
+\item[-] El principio de equivalencia.
+\item[-] La evolución del espín.
+\end{itemize}
+
+El primer punto puede notarse al comparar \eqref{eq:55} y \eqref{eq:59}, si consideramos un observador estático la primera ecuación retorna en la ley de Faraday que describe los efectos inductivos entre los campos eléctrico y magnético, dando a entender que no son independientes uno del otro. No obstante en su ecuación análoga gravitacional, podemos ver que el término al lado derecho no aparece, es decir, si consideramos un observador estático respecto a la distribución estudiada, la ecuación a la cual se reduciría \eqref{eq:59} no daría una relación entre los campos gravito-eléctricos y gravito-magnéticos, dando a entender que dichos campos son independientes uno del otro, o que al menos, si se encuentran relacionados no es de la misma forma que sus contrapartes electromagnéticas.
+
+La segunda gran diferencia entre estas dos teorías es el principio de equivalencia, esto podemos entenderlo de la siguiente forma. Consideremos una carga $q$ siendo afectada por un campo eléctrico externo $\vb{E}$, la fuerza que se ejerce el campo sobre $q$ es
+\begin{equation}
+\vb{F} = q \vb{E},
+\end{equation}
+y si no hay otras fuerzas presentes actuando sobre la carga $q$, ésta se moverá con una aceleración igual a
+\begin{equation}
+\vb{a} = \left( \frac{q}{m} \right) \vb{E},
+\end{equation}
+de donde es inmediato observar que la aceleración de dicha carga es proporcional al cociente carga/masa, teniendo así que partículas con  distinto valor de $q/m$ tendrán aceleraciones distintas.
+
+Si hacemos el mismo análisis en el contexto gravitacional, usando mecánica newtoniana tenemos que la fuerza que ejerce un campo gravitacional externo sobre una masa $m$ es
+\begin{equation}
+\label{eq:67}
+\vb{F} = m \vb{g},
+\end{equation}
+luego, $m$ se moverá con una aceleración igual a
+\begin{equation}
+\vb{a} = \left( \frac{m}{m} \right) \vb{g} = \vb{g},
+\end{equation}
+es decir, independiente del valor de la masa de $m$, éste siempre se moverá con la misma aceleración. 
+
+Comúnmente la masa que se encuentra dentro de la definición de fuerza recibe el nombre de \textit{masa intercial} mientras que la que aparece en el término proporcional al campo gravitacional externo se le denomina \textit{masa gravitacional}, sólo en el caso gravitacional ocurre que ambas son iguales y por esta razón la aceleración del objeto es independiente de su masa. Esto no ocurre en el contexto electromagnético ya que la \textit{masa eléctrica} $q$ no es igual a la masa inercial.
+
+Por último, como vimos en la sección \ref{sec:3.6.1} la diferencia entre las ecuaciones de evolución del espín en los casos gravitacional y electromagnético muestran una gran diferencia, dando a entender que la forma de la distribución a estudiar en el caso electromagnético, cualquiera sea, determinará en parte dicha evolución. Esto no ocurre en el caso gravitacional, puesto que las ecuaciones que determinan la evolución en dicho contexto son independientes de la distribución a estudiar y dependen solo de la fuente de campo externo. El término que marca una diferencia sustancial entre ambos casos nace a partir de la fuerza de Lorentz, lo que nos da pie a afirmar que una de las principales diferencias entre RG y la teoría electromagnética clásica es que en RG no hay un elemento análogo a la fuerza de Lorentz.

@@ -1,0 +1,36 @@
+\chapter{Ecuaciones de movimiento para una part\'icula monopolar}
+\label{ape:1}
+
+Para demostrar la identidad mostrada en \eqref{eq:88} es \'util notar que el argumento de la funci\'on delta de Dirac es $\delta_{(4)}=\delta_{(4)}(x^{\mu}-X^{\mu})$, lo cual permite tratar de igual forma las componentes del espaciotiempo $x^{\mu}$ con las componentes de la curva de referencia $X^{\mu}$, de esta forma tenemos que
+\begin{align}
+\nonumber
+\int_{-\infty}^{+\infty} \mathrm{d}s \nabla_{\nu} [u^{\nu} T^{\mu_1 \mu_2 \dots} \delta_{(4)}] &=
+\int_{-\infty}^{+\infty} \mathrm{d}s \left\{ u^{\nu} \nabla_{\nu} \left( T^{\mu_1 \mu_2 \dots} \delta_{(4)} \right)  \right\}\\
+\nonumber
+&= \int_{-\infty}^{+\infty} \mathrm{d}s \cd{T^{\mu_1 \mu_2 \dots}} \delta_{(4)} + \int_{-\infty}^{+\infty} \mathrm{d}s T^{\mu_1 \mu_2 \dots} \nabla_{\nu} \left( u^{\nu} \delta_{(4)} \right)\\
+\label{eq:89}
+&= \int_{-\infty}^{+\infty} \mathrm{d}s \cd{T^{\mu_1 \mu_2 \dots}} \delta_{(4)} + \int_{-\infty}^{+\infty} \mathrm{d}s T^{\mu_1 \mu_2 \dots} \left( u^{\nu} \nabla_{\nu} \delta_{(4)} + \delta_{(4)} \nabla_{\nu} u^{\nu} \right).
+\end{align}
+
+Es importante notar que
+\begin{align}
+u^{\nu} \nabla_{\nu} \delta_{(4)} + \delta_{(4)} \nabla_{\nu} u^{\nu} &= u^{\nu} \partial_{\nu} \delta_{(4)} - \Gamma^{\mu}_{\mu \nu} u^{\nu} \delta_{(4)} + \delta_{(4)} \partial_{\nu} u^{\nu} + \Gamma^{\nu}_{\nu \mu} u^{\nu} u^{\mu} \delta_{(4)} \nonumber \\
+&= u^{\nu} \partial_{\nu} \delta_{(4)} + \delta_{(4)} \partial_{\nu} u^{\nu} \nonumber \\
+\label{eq:90}
+&= \partial_{\mu} \left( u^{\mu} \delta_{(4)} \right).
+\end{align}
+
+Reemplazando \eqref{eq:90} en \eqref{eq:89} se obtiene que
+\begin{align}
+\int_{-\infty}^{+\infty} \mathrm{d}s \nabla_{\nu} [u^{\nu} T^{\mu_1 \mu_2 \dots} \delta_{(4)}] &= \int_{-\infty}^{+\infty} \mathrm{d}s \cd{T^{\mu_1 \mu_2 \dots}} \delta_{(4)} + \int_{-\infty}^{+\infty} \mathrm{d}s T^{\mu_1 \mu_2 \dots} \partial_{\mu} \left( u^{\mu} \delta_{(4)} \right).
+\end{align}
+
+Como el tensor de energ\'ia-momentum esta evaluado sobre la curva de referencia, la cual esta descrita por el parámetro $s$, al igual que la 4-velocidad, entonces podemos reescribir la ecuaci\'on anterior como
+\begin{equation}
+\label{eq:91}
+\int_{-\infty}^{+\infty} \mathrm{d}s \nabla_{\nu} [u^{\nu} T^{\mu_1 \mu_2 \dots} \delta_{(4)}] = \int_{-\infty}^{+\infty} \mathrm{d}s \cd{T^{\mu_1 \mu_2 \dots}} \delta_{(4)} + \int_{-\infty}^{+\infty} \mathrm{d}s u^{\mu}  \partial_{\mu} \left( T^{\mu_1 \mu_2 \dots} \delta_{(4)} \right),
+\end{equation}
+y recordando que las integrales son respecto al par\'ametro de la curva, tenemos que el segundo t\'ermino al lado derecho de \eqref{eq:91} es un t\'ermino de borde, as\'i
+\begin{equation}
+\int_{-\infty}^{+\infty} \mathrm{d}s \nabla_{\nu} [u^{\nu} T^{\mu_1 \mu_2 \dots} \delta_{(4)}] = \int_{-\infty}^{+\infty} \mathrm{d}s \cd{T^{\mu_1 \mu_2 \dots}} \delta_{(4)}.
+\end{equation}

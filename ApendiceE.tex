@@ -1,0 +1,250 @@
+\chapter{Script}
+\label{ape:5}
+
+\begin{minted}{python}
+from numpy import *
+from GRpy.all import *
+
+t, x0, r, th, phi = symbols('t, x^0, r, theta, varphi', 
+positive=True, real=True)
+m,a = symbols('m,a', positive = True)
+ut, uphi = symbols('u_t, u_phi', real=True)
+p3, sp2 = symbols(r'p^{\phi}, S^{\theta}', real=True)
+M = Symbol('M', real=True)
+
+s = Symbol('s', real=True)
+
+pt = Function(r'p^t')(s)
+pr = Function(r'p^r')(s)
+ptheta = Function(r'p^{\theta}')(s)
+pphi = Function(r'p^{\phi}')(s)
+
+st = Function(r'S^t')(s)
+sr = Function(r'S^r')(s)
+stheta = Function(r'S^{\theta}')(s)
+sphi = Function(r'S^{\phi}')(s)
+
+sigma = r**2 + (a*cos(th))**2
+delta = r**2 - 2*m*r + a**2
+
+g = Metric((x0, r, th, phi))
+g[-0,-0] = (1-(2*m*r/sigma))
+g[-0,-1] = 0
+g[-0,-2] = 0
+g[-0,-3] = (2*a*m*r*sin(th)**2)/sigma
+g[-1,-0] = 0
+g[-1,-1] = -sigma/delta
+g[-1,-2] = 0
+g[-1,-3] = 0
+g[-2,-0] = 0
+g[-2,-1] = 0
+g[-2,-2] = -sigma
+g[-2,-3] = 0
+g[-3,-0] = (2*a*m*r*sin(th)**2)/sigma
+g[-3,-1] = 0
+g[-3,-2] = 0
+g[-3,-3] = -(r**2 +a**2 + (2*a**2*m*r*sin(th)**2)/sigma)*sin(th)**2
+
+ginv = g.invert()
+chris = Christoffel(g)
+
+def dw(A,mu):
+    downvector=0
+    for nu in range(4):
+        downvector += g.components[(-mu,-nu)]*A[nu]
+    
+    return simplify(downvector.subs(th,pi/2))
+
+def down(A):
+    return [dw(A,mu) for mu in range(4)]
+
+sup=[st,sr,stheta,sphi]
+pup=[pt,pr,ptheta,pphi]
+
+uphi=a/(a**2+r**2)*ut
+uupnonorm=[ut,0,0,uphi]
+
+N=0
+for i in range(4):
+    for j in range(4):
+        N += g.components[(-i,-j)]*uupnonorm[i]*uupnonorm[j]
+        
+eq=1-N.subs(th,pi/2)
+
+utnorm=solve(eq,ut)[1]
+uphinorm=a/(a**2+r**2)*utnorm
+uup=[utnorm,0,0,uphinorm]
+udown=down(uup)
+
+def ch(mu):
+    ch=0
+    for i in range(4):
+        for j in range(4):
+            ch += chris.components[(mu,-i,-j)]*uup[i]*pup[j]
+        
+    return ch
+
+def dpmu(mu):
+    A=simplify(ch(mu).subs(th,pi/2))
+    return diff(pup[mu],s)+A
+
+dpmu=[dpmu(0),dpmu(1),dpmu(2),dpmu(3)]
+
+sdown=down(sup)
+
+c2=0
+for i in range(4):
+    for j in range(4):
+        for k in range(4):
+            c2 += chris.components[(i,-j,-k)]*sdown[i]*uup[j]*uup[k]
+            
+def c3(mu):
+    c=0
+    for i in range(4):
+        for j in range(4):
+            c += chris.components[(mu,-i,-j)]*sup[i]*uup[j]
+    
+    return c
+
+def dsmu(mu):
+    A=c3(mu)+uup[mu]*c2
+    B=simplify(A.subs(th,pi/2))
+    return diff(sup[mu],s)+B
+    
+dsmu=[dsmu(0),dsmu(1),dsmu(2),dsmu(3)]
+
+dpmu2=[dpmu[0],dpmu[1],dpmu[3]]
+psol=dsolve(dpmu2)
+dsmu2=[dsmu[0],dsmu[1],dsmu[3]]
+ssol=dsolve(dsmu2)
+
+supsol = [ssol[0].rhs,ssol[1].rhs,sp2,ssol[2].rhs]
+
+condicion=0
+for i in range(4):
+    condicion += supsol[i]*udown[i]
+
+print('la condicion a satisfacer es:',simplify(condicion))
+
+pupsol = [psol[0].rhs, psol[1].rhs ,p3, psol[2].rhs]
+sdownsol=down(supsol)
+
+def lcup(i,j,k,l):
+    return LeviCivita(i,j,k,l)/(r**2)
+
+def termino(mu):
+    termino=0
+for nu in range(4):
+for alpha in range(4):
+for beta in range(4):
+for sigma in range(4):
+for rho in range(4):
+termino += lcup(mu,nu,alpha,beta)*chris.components[(rho,-nu,-sigma)]
+*udown[rho]*uup[sigma]*sdownsol[beta]*udown[alpha]
+                        
+    return termino
+
+Masa=0
+for mu in range(4):
+    Masa += pupsol[mu]*udown[mu]
+
+def p(mu):
+    A=Masa*uup[mu]+termino(mu)
+    return simplify(A.subs(th,pi/2))
+
+momentum=[p(mu) for mu in range(4)]
+
+print(pupsol[1], momentum[1])
+print(pupsol[2], momentum[2])
+
+pmu=[p3*a*(m+r)/m,0,0,p3]
+smu=[0,0,sp2,0]
+smudown=down(smu)
+
+def t(mu):
+    termino=0
+    
+for nu in range(4):
+for alpha in range(4):
+for beta in range(4):
+for sigma in range(4):
+for rho in range(4):
+termino += lcup(mu,nu,alpha,beta)*chris.components[(rho,-nu,-sigma)]
+*udown[rho]*uup[sigma]*smudown[beta]*udown[alpha]
+                        
+    return termino
+                        
+
+Masa2=0
+for mu in range(4):
+    Masa2 += pmu[mu]*udown[mu]
+
+def p2(mu):
+    A=Masa2*uup[mu]+t(mu)
+    return simplify(A.subs(th,pi/2))
+
+pmu2=[p2(mu) for mu in range(4)]
+
+print(0==pmu[1], pmu[1]==pmu2[1], 0==pmu[2], pmu[2]==pmu2[2])
+print(pmu[0],simplify(pmu2[0]))
+print(pmu[3],simplify(pmu2[3]))
+
+eq1=pmu[0]-simplify(pmu2[0])
+eq2=pmu[3]-simplify(pmu2[3])
+eqtotal=[eq1,eq2]
+
+print(solve(eqtotal,[sp2,p3]))
+print(simplify(pmu2[0].subs(sp2,spin)))
+
+p=solve(eq,p3)[0]
+
+pmu = [p*a*(m+r)/m,0,0,p]
+print(pmu)
+
+masaspin = 0
+for mu in range(4):
+    masaspin += pmu[mu]*udown[mu]
+    
+print(simplify(masaspin))
+
+spin2=spin
+
+pmu =[p3*a*(m+r)/m,0,0,p3]
+smu=[0,0,spin2,0]
+smudown=down(smu)
+
+def t(mu):
+    termino=0
+    
+for nu in range(4):
+for alpha in range(4):
+for beta in range(4):
+for sigma in range(4):
+for rho in range(4):
+termino += lcup(mu,nu,alpha,beta)*chris.components[(rho,-nu,-sigma)]
+*udown[rho]*uup[sigma]*smudown[beta]*udown[alpha]
+                        
+    return termino
+                        
+
+Masa3=0
+for mu in range(4):
+    Masa3 += pmu[mu]*udown[mu]
+
+def p4(mu):
+    A=Masa3*uup[mu]+t(mu)
+    return simplify(A.subs(th,pi/2))
+
+pmu3=[p4(mu) for mu in range(4)]
+
+pmu==pmu3
+
+eq4=M-simplify(Masa3)
+pm=solve(eq4,p3)[0]
+
+pmu=[pm*a*(m+r)/m,0,0,pm]
+print(pmu)
+
+smu=[0,0,spin2.subs(p3,pm),0]
+print(smu)
+\end{minted}

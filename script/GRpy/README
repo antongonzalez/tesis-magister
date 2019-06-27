@@ -1,0 +1,47 @@
+###############################################################################
+File: README.txt
+Author: Sergei
+Last modified: August 30, 2009
+This file is part of GRPy, a small GR-centered package.
+###############################################################################
+
+INSTALLATION
+-------------------------------------------------------------------------------
+GRPy has very few prerequisites. All you need are:
+ - Python 2.6.2 or later
+ - Sympy, the latest stable or better an SVN trunk build
+ 
+ To install GRPy, simply untar the source tarball and make sure the
+ directory is in you PYTHONPATH.
+ See testtensor.py for example usage.
+ 
+NOTES
+-------------------------------------------------------------------------------
+Note that all covariant indices are negative! (except 0 of course). Also,
+note that the answers given by the predefined routines are NOT simplified
+fully. This has to do with the fact that currently sympy can only perform
+very trivial simnplifications and fails to simplify complicated expressions
+or simply hangs. For this reason, the user is well-advised to apply the
+simplification separetly, see commands like trim, together, ratsimp, radsimp
+at:
+http://docs.sympy.org/genindex.html
+
+Also, note that this may be obsoleted if tensor objects are finally natively
+implemented in sympy
+############################################################################
+############################################################################
+The new version has been developed by Nataly Ibarra and Guillermo Rubilar:
+
+The code works for n-dimentional spaces and can compute many interesting 
+geometrical quantities as is shown in the test (jupyter) notebook for the 
+sphere.
+
+Problems with the computation of the determinant of the metric have been reported. 
+For any comment please contact Nataly Ibarra at natalynicole.ibarravera@gmail.com
+
+An extensive manual will be ready soon!! ;)
+
+Last modification: November 4, 2015.
+Original version download from https://pypi.python.org/pypi/GRPy.
+############################################################################
+############################################################################

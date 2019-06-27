@@ -1,0 +1,22 @@
+\chapter{Transformación inversa para los tensores de marea}
+\label{ape:4}
+
+Para demostrar las ecuaciones \eqref{eq:52} tenemos que a partir de la definición \eqref{eq:51} se puede construir que
+\begin{align}
+\epsilon_{\alpha \beta \mu \sigma} \mathtt{B}^{\mu}_{\ \gamma} u^{\sigma} &= \frac{1}{2} \epsilon_{\alpha \beta \mu \sigma} \epsilon^{\delta \lambda \rho \mu} \partial_{\gamma} F_{\rho \lambda} u_{\delta} u^{\sigma}\\
+&= \partial_{\gamma} F_{\mu \nu} + 2u_{[\alpha} \mathtt{E_{\beta] \gamma}},
+\end{align}
+de donde se puede deducir que
+\begin{equation}
+\partial_{\gamma} F_{\mu \nu} =  \epsilon_{\alpha \beta \mu \sigma} \mathtt{B}^{\mu}_{\ \gamma} u^{\sigma} - 2u_{[\alpha} \mathtt{E_{\beta] \gamma}}.
+\end{equation}
+
+Para el caso gravitacional tenemos que, de forma similar, se puede construir que
+\begin{align}
+\epsilon_{\alpha \beta \mu \sigma} \mathbb{H}^{\mu}_{\ \gamma} u^{\sigma} &= \frac{1}{2} \epsilon_{\alpha \beta \mu \sigma} \epsilon^{\rho \lambda \mu \delta} R_{\rho \lambda \gamma \xi} u_{\delta} u^{\xi} u^{\sigma}\\
+&= R_{\alpha \beta \xi \gamma} u^{\xi} + 2u_{[\alpha} \mathbb{E}_{\beta] \gamma},
+\end{align}
+de donde se deduce que
+\begin{equation}
+R_{\alpha \beta \gamma \xi} u^{\xi} = \epsilon_{\alpha \beta \mu \sigma} \mathbb{H}^{\mu}_{\ \gamma} u^{\sigma} - 2u_{[\alpha} \mathbb{E}_{\beta] \gamma}.
+\end{equation}

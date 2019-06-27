@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt,openany]{report}
+\usepackage[left=4cm,right=2.5cm,top=4cm,bottom=2.5cm]{geometry}
+\usepackage{physics}
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsfonts,amssymb,amsmath,amsthm}
+\usepackage{txfonts}
+\usepackage{subcaption}
+\usepackage[colorlinks]{hyperref}
+\usepackage{dsfont}
+%\usepackage{minted}
+\usepackage[pdftex]{graphicx}
+\usepackage{tocloft}
+
+\setlength{\parskip}{0.4cm}
+
+\newtheorem{theorem}{Teorema}
+\newtheorem{lemma}[theorem]{Lema}
+
+\newcommand{\cd}[1]{
+\frac{\delta #1}{\mathrm{d}s}
+}
+
+\newcommand{\s}{									
+\mathrm{s}
+}
+
+\newcommand{\des}[2]{
+\stackrel{#1}{#2}{\!}
+}
+
+\newcommand{\dual}[1]{
+{}^*\! #1
+}
+
+\begin{document}
+\pagenumbering{roman}
+\pagestyle{empty}
+\include{Portada}
+
+\pagestyle{myheadings}
+
+\newpage
+\thispagestyle{empty}
+
+\vspace*{\fill}
+\begin{flushright}
+\large
+\textit{``Peter Parker... brilliant but lazy...''}
+
+\footnotesize
+- Si no sabes qui\'en lo dijo, creo que hay algo que debes hacer antes de leer esta tesis.
+\end{flushright}
+
+
+\newpage
+\pagenumbering{Roman}
+\input{agradecimientos}
+
+\newpage
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{P\'agina}\par}
+
+\newpage	
+\phantomsection	
+\addcontentsline{toc}{chapter}{Lista de figuras}
+\listoffigures
+
+\newpage
+\addcontentsline{toc}{chapter}{Resumen}
+\input{resumen}
+\newpage
+\addcontentsline{toc}{chapter}{Introducci\'on}
+\input{introduccion}
+\newpage
+\pagenumbering{arabic}
+\input{cap1}						%Capitulo Electrodinamica covariante
+\newpage
+\input{cap2} 			            %Capítulo Relatividad General
+\newpage
+\input{cap3}						%Capitulo de analogia entre rg y electro
+\newpage
+\input{cap4}						%Capítulo de las soliciones
+\newpage
+\input{conclusion}
+
+\appendix
+\input{Convenciones}
+\input{ApendiceA}
+\input{ApendiceD}
+\input{ApendiceB}
+\input{ApendiceF}
+\input{ApendiceC}
+%\input{ApendiceE}
+
+\newpage	
+\phantomsection
+\bibliographystyle{plain}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{RefManual}
+\end{document}

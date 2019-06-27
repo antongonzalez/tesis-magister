@@ -1,0 +1,61 @@
+\chapter{Cantidades conservadas y evoluci\'on del esp\'in}
+\label{ape:6}
+
+Para demostrar \eqref{eq:45} usaremos la definición del 4-momentum y la evolución de este.
+
+Reemplazando \eqref{eq:44} en \eqref{eq:82} se obtiene que
+\begin{equation}
+\cd{} \left[ \des{1}{m} u^{\mu} + u_{\gamma} \cd{} \des{1}{S}^{\mu \gamma} \right] = -\frac{1}{2} R^{\ \ \ \ \mu}_{\nu \gamma \rho} \des{1}{S}^{\mu \gamma} u^{\rho}.
+\end{equation}
+
+Multiplicando con $u_{\mu}$ el lado derecho se anula, quedando
+\begin{equation}
+u_{\mu} \cd{} \left[ \des{1}{m} u^{\mu} + u_{\gamma} \cd{} \des{1}{S}^{\mu \gamma} \right] = 0.
+\end{equation}
+
+Expandiendo y despejando el valor de la derivada de la masa obtenemos que
+\begin{equation}
+\cd{\des{1}{m}} = u_{\nu} \cd{u_{\gamma}} \cd{} \des{1}{S}^{\nu \gamma} = \cd{u_{\gamma}} \cd{} \left( u_{\nu} \des{1}{S}^{\nu \gamma} \right).
+\end{equation}
+
+Para demostrar \eqref{eq:103} a partir de la definición del 4-momentum se puede ver que
+\begin{equation}
+\des{1}{p}^{\mu} u^{\nu} = \ \des{1}{m} u^{\mu} u^{\nu} + u_{\gamma}  u^{\nu} \cd{} \des{1}{S}^{\mu \gamma},
+\end{equation}
+lo cual si antisimetrizamos se convierte en
+\begin{equation}
+\des{1}{p}^{\mu} u^{\nu} - \des{1}{p}^{\nu} u^{\mu} = u_{\gamma}  u^{\nu} \cd{} \des{1}{S}^{\mu \gamma} - u_{\gamma}  u^{\mu} \cd{} \des{1}{S}^{\nu \gamma},
+\end{equation}
+y de \eqref{eq:83} se obtiene
+\begin{equation}
+\label{eq:113}
+\cd{} \des{1}{S}^{\mu \nu} = 2 \des{1}{p}^{[\mu} u^{\nu]}.
+\end{equation}
+
+Por último, también podemos demostrar la conservación de \eqref{eq:46} y \eqref{eq:47}. Es inmediato notar que de \eqref{eq:47} y \eqref{eq:104} se deduce que
+\begin{equation}
+\cd{S^2} = 4 S_{\mu \nu} p^{[ \mu} u^{\nu]},
+\end{equation}
+de donde es inmediato ver que asumiendo cualquiera de las dos condiciones, ya sea la de Mathisson-Pirani o de Tulczyjew, dicha cantidad se conserva a lo largo de la curva.
+
+Por último, podemos asegurar la conservación \eqref{eq:46} de un calculo previo. Sabemos que
+\begin{equation}
+\label{eq:104}
+\cd{\bar{m}} = \frac{1}{2\bar{m}} \cd{p^{\mu} p_{\mu}} \quad \Rightarrow \quad \bar{m} \cd{\bar{m}} = p^{\mu} \cd{p_{\mu}}.
+\end{equation}
+
+Además podemos ver que al multiplicar \eqref{eq:113} con $p_{\mu}$ se obtiene que
+\begin{equation}
+p_{\mu} \cd{S^{\mu \nu}} = \bar{m}^2 u^{\nu} - m p^{\nu},
+\end{equation}
+lo cual, al multiplicar por $\delta p_{\nu} / \mathrm{d}s$ se transforma en
+\begin{equation}
+\cd{p_{\nu}} p_{\mu} \cd{S^{\mu \nu}} = \bar{m}^2 u^{\nu} \cd{p_{\nu}} - mp^{\nu} \cd{p_{\nu}},
+\end{equation}
+y al reemplazar \eqref{eq:82} se deduce que
+\begin{equation}
+\label{eq:105}
+m \bar{m} \cd{\bar{m}} = - p_{\mu} \cd{p_{\nu}} \cd{S^{\mu \nu}}.
+\end{equation}
+
+Finalmente al reemplazar \eqref{eq:105} en \eqref{eq:104}, vemos que al utilizar la condición suplementaria de Tulczyjew, la masa $\bar{m}$ es una cantidad que se conserva a lo largo de la curva.
