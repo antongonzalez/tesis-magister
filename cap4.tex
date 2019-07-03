@@ -2,27 +2,45 @@
 \label{cap:4}
 \newpage
 
-\section{Planteamiento de las ecuaciones}
+\section{Fundamentación}
 
-En \cite{Costa-Natario-Zilhao} observan casos particulares a las ecuaciones de movimiento mostradas en \eqref{eq:66}, concretamente se estudia como la ecuación \eqref{eq:66}, asumiendo la condición suplementaria de Pirani, se reduce a 
+En \cite{Costa-Natario-Zilhao} se estudia cómo, bajo la condición suplementaria de Mathisson-Pirani y a partir de \eqref{eq:66}, la trayectoria para una paricula con momento angular intrínseco $S$ y modelado hasta orden dipolar en la expansión multipolar (un giróscopo) viene regida por
 \begin{equation}
-\label{eq:69}
-\cd{p^{\mu}} = 0,
+\cd{p^{\mu}} = -\mathbb{H}^{\mu}_{\ \nu} S^{\nu},
 \end{equation}
-considerando una 4-velocidad tal que $u^{\theta}=0$, y 
-\begin{equation}
-\label{eq:68}
-\omega := \dv{\phi}{t} = \frac{a}{a^2 + R^2},
-\end{equation}
-donde $\omega$ es la velocidad angular para la cual los observadores miden un campo gravito-magnético nulo. Dicho análisis surge como análogo a un estudio realizado en el caso electromagnético, donde se obtienen las componentes no-nulas del tensor de marea magnético que, a diferencia del caso gravitacional, no puede ser reducido a \eqref{eq:69} ya que la parte antisimétrica de \eqref{eq:51} no puede ser nulo al considerar efectos de inducción electromagnética dentro del estudio.
+donde se define el 4-vector de espín como $S^{\mu} := -\frac{1}{2} \epsilon^{\mu \nu \rho \sigma} S_{\nu \rho} u_{\sigma}$.
 
-Esto nos lleva a la pregunta si existen geodésicas tales que las condiciones anteriormente mencionadas. Las más simples de estudiar son las geodésicas circulares, es decir cuando además $u^r=0$. Sin embargo, es posible demostrar que no existen geodésicas circulares con velocidades angulares igual a \eqref{eq:68}, esto se puede ver al comparar \eqref{eq:68} con la velocidad angular de una geodésica circular (\textit{e.g.} \cite{Matolcsi})
-\begin{equation}
-\omega_{\mathrm{geo}} = \frac{1}{a + \sqrt{\frac{r^3}{M}}},
-\end{equation}
-de donde se deduce que el radio de la órbita debiera ser tal que se ésta encontraría al interior del horizonte de eventos del agujero negro.
+Si estamos en un espaciotiempo de Schwarszchild, al ser éste un espaciotiempo de Petrov tipo D, podemos esperar que existan observadores tales que $\mathbb{H}_{\mu \nu}=0$. Así, para una 4-velocidad arbitraria tenemos que las componentes no-nulas del tensor gravito-magético de mareas se reducen a
+\begin{align}
+\mathbb{H}_{r \theta} &= \alpha u^{\phi} u^{t},\\
+\mathbb{H}_{\theta t} &= -\alpha u^{\phi} u^{r},\\
+\mathbb{H}_{r \phi} &= \alpha u^{\theta} u^{t},\\
+\mathbb{H}_{\phi t} &= \alpha u^{\theta} u^{r}.
+\end{align}
 
-Sin embargo, y pese al análisis anterior, aun existe una interrogante sobre \eqref{eq:69} que es, ¿existen soluciones circulares a \eqref{eq:69}? (ver figura \ref{fig:7}).
+La condición $u^{\theta} = u^{\phi} = 0$ implica que $\mathbb{H}=0$, permitiendo que la única condición remanente sobre la 4-velocidad es que $u^{\mu} u_{\mu} = 1$. Esto quiere decir que un giróscopo siguiendo una trayectoria radial en un espaciotiempo de Schwarszchild no experimentará ningún efecto producto de las fuerzas de marea.
+
+A partir de lo anterior, se puede estudiar el problema análogo pero en un contexto electromagnético, es decir, la fuerza que experimentará un dipolo magnético producto de una distribución esférica de carga total $Q$ viene determinada por
+\begin{equation}
+\label{eq:magforce}
+\cd{p^{\mu}} = -\mathtt{H}^{\mu}_{\ \nu} \mu^{\nu}.
+\end{equation}
+
+Siguiendo un análisis similar, la única condición que permite hacer nulas todas las componentes del tensor magnético de mareas es $u^i=0$, es decir, observadores estáticos respecto al dipolo magnético. 
+
+Es interesante notar que para velocidades radiales, es decir velocidades tales que $u^{\theta} = u^{\phi} = 0$, el tensor magnético de mareas se reduce solo a su parte antisimétrica, y a partir de \eqref{eq:maxwell4} queda en evidencia que esto es producto de que un dipolo magnético en movimiento siempre experimentará un tensor de mareas no-nulo producto de los efectos de inducción magnética, lo cual nuevamente marca una gran diferencia respecto de su contraparte gravitacional.
+
+Es posible realizar un análisis similar en la métrica de Kerr, y si empezamos estudiando el caso electromagnético, la fuerza que experimenta un dipolo magnético producto de una distribución de carga $Q$ con momento angular $J$ viene dada por \eqref{eq:magforce}. 
+
+Como es de esperar luego de ver el caso en la métrica de Schwarszchild, no es posible anular completamente el tensor de mareas gravito-magnético, sin embargo la condición que permite anular la parte simétrica de dicho tensor viene dada por $u^r=u^{\theta}=0$ y que
+\begin{equation}
+\label{eq:angular-velocity-em}
+\omega := \dv{\theta}{t} = \frac{J}{MR^2},
+\end{equation}
+donde $\omega$ es la velocidad angular de la órbita del dipolo.
+
+Es decir, para órbitas circulares tales que el dipolo tenga una velocidad angular igual a \eqref{eq:angular-velocity-em}, entonces $\mathtt{B}_{\mu \nu} = \mathtt{B}_{[\mu \nu]}$, y así un dipolo magnético siguiendo una trayectoria con tales características siempre experimentará una fuerza producto del campo externo.
+
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.9]{images/solucion-en-kerr.pdf}
@@ -30,28 +48,47 @@ Sin embargo, y pese al análisis anterior, aun existe una interrogante sobre \eq
 \label{fig:7}
 \end{figure}
 
-Para responder esta pregunta procederemos a resolver las ecuaciones de movimiento \eqref{eq:69} y \eqref{eq:103}. Como estamos considerando órbitas circulares, y si por simplicidad suponemos que se encuentra en el plano ecuatorial, la velocidad de un observador co-móvil con el satélite es $u^{\mu} = \left[ u^t,0,0,u^{\phi} \right]$.
+Si estudiamos ahora el análogo gravitacional del problema, es decir, un giróscopo orbitando alrededor de un agujero negro rotante (ver figura \ref{fig:7}), las condiciones que permiten anular el tensor gravito-magnético de mareas son que $u^{\theta}=0$ y 
+\begin{equation}
+\label{eq:68}
+\omega := \dv{\phi}{t} = \frac{a}{a^2 + R^2},
+\end{equation}
+donde nuevamente $\omega$ representa la velocidad angular de la órbita.
 
-De \eqref{eq:68}, y la condición de normalización $u^{\mu}u_{\nu} = 1$, se obtiene que la 4-velocidad del satélite es
+De esta forma, las ecuaciones que determinan el movimiento del giróscopo vienen dadas por 
+\begin{equation}
+\label{eq:69}
+\cd{p^{\mu}} = 0.
+\end{equation}
+
+Esto nos lleva a la pregunta de si existen geodésicas tales que las condiciones anteriormente mencionadas sean válidas. Las más simples de estudiar son las geodésicas circulares, es decir cuando además $u^r=0$. Sin embargo podemos refutar dicha hipótesis a partir del hecho que, para geodésicas circulares, las velocidades angulares en dichas órbitas vienen determinadas por \cite{Matolcsi} 
+\begin{equation}
+\label{eq:angular-velocity-geodesic}
+\omega_{\mathrm{geo}} = \frac{1}{a + \sqrt{\frac{r^3}{M}}}.
+\end{equation}
+
+Luego, de \eqref{eq:68} y \eqref{eq:angular-velocity-geodesic} se puede determinar el radio de la órbita, mostrando que ésta se debería encontrar dentro del horizonte de eventos, lo que nos permite demostrar que no existen geodésicas circulares tales que $\mathbb{H}_{\mu \nu}=0$. 
+
+No obstante, de \eqref{eq:69} se puede plantar la siguiente interrogante: ¿existen soluciones circulares para \eqref{eq:69}?.
+
+\section{Planteamiento de las ecuaciones}
+
+Para responder esta pregunta planteada en el apartado anterior, procederemos a resolver las ecuaciones de movimiento \eqref{eq:69} y \eqref{eq:103}. 
+
+Al estar considerando órbitas circulares, y si por simplicidad suponemos que se encuentra en el plano ecuatorial, la velocidad de un observador co-móvil con el giróscopo es $u^{\mu} = \left[ u^t,0,0,u^{\phi} \right]$.
+
+De \eqref{eq:68}, y la condición de normalización $u^{\mu}u_{\nu} = 1$, se obtiene que la 4-velocidad del giróscopo es
 \begin{equation}
 \label{eq:70}
 u^{\mu} = \left [ \frac{\left(a^{2} + r^{2}\right)}{r\sqrt{a^{2} - 2 m r + r^{2}}}, \quad 0, \quad 0, \quad \frac{a}{r\sqrt{a^{2} - 2 m r + r^{2}}}\right ],
 \end{equation}
-y, definiendo $u_{\mu} := g_{\mu \nu} u^{\nu}$ tenemos que
+y, definiendo $u_{\mu} := g_{\mu \nu} u^{\nu}$, tenemos que
 \begin{equation}
 \label{eq:71}
-u_{\mu} = \left [ \frac{1}{r}\sqrt{a^{2} - 2 m r + r^{2}}, \quad 0, \quad 0, \quad -\frac{a}{r} \sqrt{a^{2} - 2 m r + r^{2}} \right ]
+u_{\mu} = \left [ \frac{1}{r}\sqrt{a^{2} - 2 m r + r^{2}}, \quad 0, \quad 0, \quad -\frac{a}{r} \sqrt{a^{2} - 2 m r + r^{2}} \right ].
 \end{equation}
 
-Por otro lado, si definimos implícitamente el 4-vector de espín $S^{\mu}$ como 
-\begin{equation}
-S^{\mu} := -\frac{1}{2} \epsilon^{\mu \nu \rho \sigma} S_{\nu \rho} u_{\sigma},
-\end{equation}
-y tal que
-\begin{equation}
-S^{\mu \nu} = \epsilon^{\mu \nu \rho \sigma} S_{\rho} u_{\sigma},
-\end{equation}
-las ecuaciones de evolución para el vector de espín son
+Por otro lado, a partir de la definición del 4-vector de espín, se pueden re-escribir las ecuaciones que determinan la evolución de éste, obteniendo que
 \begin{equation}
 \label{eq:72}
 \cd{S^{\mu}} = -S_{\nu} \cd{u^{\nu}} u^{\mu}.
@@ -134,7 +171,7 @@ p^{\mu} &= \left [ - \frac{S^{\theta} a \left(m + r\right)}{r \sqrt{a^{2} - 2 m 
 S^{\mu} &= \left [ 0, \quad 0, \quad S^{\theta}, \quad 0\right ].
 \end{align}
 
-Es importante destacar que la masa del satélite puede calcularse como
+Es importante destacar que la masa del giróscopo puede calcularse como
 \begin{equation}
 \label{eq:78}
 M := p^{\mu} u_{\mu} = -\frac{S^{\theta}a}{r},
@@ -147,22 +184,25 @@ p^{\mu} &= \left [ \frac{M \left(m + r\right)}{\sqrt{a^{2} - 2 m r + r^{2}}}, \q
 S^{\mu} &= \left [ 0, \quad 0, \quad - \frac{Mr}{a}, \quad 0\right ].
 \end{align}
 
+\newpage
 \section{Propiedades de la solución}
 
 De la solución podemos destacar varios puntos:
 \begin{itemize}
-\item[-] Los parámetros de la solución determinan una relación entre la masa y el espín del satélite, dicha relación nos da a entender que, por ejemplo, una vez fijado el valor del espín inmediatamente queda determinado el valor de la masa del satélite (o viceversa), de tal forma que se logre contrarrestar la atracción del agujero negro tal que la órbita se mantenga circular.
-\item[-] La única dirección y sentido permitidos para el espín es ser antiparalelo a la rotación del agujero negro, esto es por el signo $-$ en \eqref{eq:78} que nos indica que el momento angular intrínseco del satélite debe ser opuesto a la rotación del agujero negro y el hecho de que la única componente no-nula para el espín es la componente $S^{\theta}$.
+\item[-] Los parámetros de la solución determinan una relación entre la masa y el espín del giróscopo, dicha relación nos da a entender que, por ejemplo, una vez fijado el valor del espín inmediatamente queda determinado el valor de la masa del giróscopo (o viceversa), de tal forma que se logre contrarrestar la atracción del agujero negro tal que la órbita se mantenga circular.
+\item[-] La única dirección y sentido permitidos para el espín es ser antiparalelo a la rotación del agujero negro, esto es por el signo $-$ en \eqref{eq:78} que nos indica que el momento angular intrínseco del giróscopo debe ser opuesto a la rotación del agujero negro y el hecho de que la única componente no-nula para el espín es la componente $S^{\theta}$.
 \end{itemize}
 
-Es importante destacar que no es posible obtener el caso en la métrica de Schwarszchild a partir del resultado encontrado. Esto es por la suposición inicial al momento de plantear las ecuaciones de movimiento es que la velocidad angular del satélite es proporcional al parámetro rotacional del agujero negro, es decir $\omega \propto a$, y calcular el límite $a \rightarrow 0$ implica que $\omega = 0$, lo cual implicaría que la órbita no sería circular.
+Es importante destacar que no es posible obtener el caso en la métrica de Schwarszchild a partir del resultado encontrado. Esto es por la suposición inicial al momento de plantear las ecuaciones de movimiento es que la velocidad angular del giróscopo es proporcional al parámetro rotacional del agujero negro, es decir $\omega \propto a$, y calcular el límite $a \rightarrow 0$ implica que $\omega = 0$, lo cual implicaría que la órbita no sería circular.
 
-No obstante, es interesante hacer notar que si definimos la 4-fuerza sobre el satélite como
+No obstante, es interesante hacer notar que si definimos la 4-fuerza sobre el giróscopo como
 \begin{equation}
 \label{eq:124}
 F^{\mu} := M \cd{u^{\mu}} = \left[ 0, \frac{M(mR-a^2)}{R^3},0,0 \right],
 \end{equation}
-y si consideramos el caso asintótico, es decir $R \gg m $, entonces se puede deducir la ley de gravitación universal de Newton, esto cumple con el principio de correspondencia puesto que al encontrarse lejos del agujero negro no hay diferencia entre un agujero negro rotante y el campo gravitacional generado por una distribución de masa. Además, al ser una órbita circular en donde la único agente externo acutuando sobre el satélite tiene solo componente radial no-nula se puede ver que el satélite presenta un movimiento circular uniforme, ya que presenta una velocidad angular constante, logrando identificar así que \eqref{eq:124} corresponde a la fuerza centrípeta de la órbita.
+y si consideramos el caso asintótico, es decir $R \gg m $, entonces se puede deducir la ley de gravitación universal de Newton. Esto cumple con el principio de correspondencia puesto que al encontrarse lejos del agujero negro no hay diferencia entre un agujero negro rotante y el campo gravitacional generado por una distribución de masa. 
+
+Además, al ser una órbita circular en donde la único agente externo acutuando sobre el giróscopo tiene solo componente radial no-nula se puede ver que el giróscopo presenta un movimiento circular uniforme, ya que presenta una velocidad angular constante, logrando identificar así que \eqref{eq:124} corresponde a la fuerza centrípeta de la órbita.
 
 Por último, es necesario agregar que la velocidad coordenada tangencial de la órbita es
 \begin{equation}

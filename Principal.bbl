@@ -1,0 +1,145 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ciufolini}
+Ignazio Ciufolini.
+\newblock Generalized geodesic deviation equation.
+\newblock {\em Physical Review D}, 34, 1986.
+
+\bibitem{Coles}
+Peter Coles.
+\newblock {Einstein, eddington and the 1919 eclipse}.
+\newblock {\em ASP Conf. Ser.}, 252:21, 2001.
+
+\bibitem{Papapetrou2}
+E.~Corinaldesi, A.~Papapetrou, and Rudolf~Ernst Peierls.
+\newblock Spinning test-particles in general relativity. ii.
+\newblock {\em Proceedings of the Royal Society of London. Series A.
+  Mathematical and Physical Sciences}, 209(1097):259--268, 1951.
+
+\bibitem{Costa-Herdeiro-Natario-Zilhao}
+L~Costa, Carlos Herdeiro, Jose Natario, and Miguel Zilhão.
+\newblock Mathisson’s helical motions for a spinning particle: Are they
+  unphysical?
+\newblock {\em Physical Review D}, 85:024001, 01 2012.
+
+\bibitem{Costa-Herdeiro}
+L.~Filipe~O. Costa and Carlos A.~R. Herdeiro.
+\newblock Gravitoelectromagnetic analogy based on tidal tensors.
+\newblock {\em Phys. Rev. D}, 78:024021, Jul 2008.
+
+\bibitem{Costa-Natario-Zilhao}
+L.~Filipe~O. Costa, Jos\'e Nat\'ario, and Miguel Zilh\~ao.
+\newblock Spacetime dynamics of spinning particles: Exact electromagnetic
+  analogies.
+\newblock {\em Phys. Rev. D}, 93:104006, May 2016.
+
+\bibitem{inverno}
+Ray D'Inverno.
+\newblock {\em Introducing Einstein's Relativity}.
+\newblock Oxford, 1992.
+
+\bibitem{Einstein}
+A.~Einstein.
+\newblock Zur elektrodynamik bewegter körper.
+\newblock {\em Annalen der Physik}, 322(10):891--921, 1905.
+
+\bibitem{Einstein-2}
+Albert Einstein.
+\newblock Grundgedanken der allgemeinen relativitätstheorie und anwendung
+  dieser theorie in der astronomie.
+\newblock {\em Reussische Akademie der Wissenschaften, Sitzungsberichte}, 20,
+  01 2015.
+
+\bibitem{Heinicke}
+Christian Heinicke and Friedrich~W. Hehl.
+\newblock {Schwarzschild and Kerr Solutions of Einstein's Field Equation -- an
+  introduction}.
+\newblock {\em Int. J. Mod. Phys.}, D24(02):1530006, 2014.
+
+\bibitem{nataly}
+Nataly Ibarra.
+\newblock Implementación numérica de dinámica postnewtoniana y emisión de
+  ondas gravitacionales.
+\newblock {\em Universidad de Concepción}, 2016.
+
+\bibitem{Matolcsi}
+Tam{\'a}s Matolcsi, M{\'a}t{\'e} Matolcsi, and Tam{\'a}s Tasn{\'a}di.
+\newblock On the relation of thomas rotation and angular velocity of reference
+  frames.
+\newblock {\em General Relativity and Gravitation}, 39(4):413--426, Apr 2007.
+
+\bibitem{Maxwell}
+James Maxwell.
+\newblock A dynamical theory of the electromagnetic field.
+\newblock {\em Phil. Trans. R. Soc. Lond.}, 155, 1865.
+
+\bibitem{Papapetrou1}
+A.~Papapetrou and Rudolf~Ernst Peierls.
+\newblock Spinning test-particles in general relativity. i.
+\newblock {\em Proceedings of the Royal Society of London. Series A.
+  Mathematical and Physical Sciences}, 209(1097):248--258, 1951.
+
+\bibitem{Poisson}
+Eric Poisson and Clifford~M. Will.
+\newblock {\em Gravity: Newtonian, Post-Newtonian, Relativistic}.
+\newblock Cambridge, 2014.
+
+\bibitem{gr1}
+Guillermo Rubilar.
+\newblock \textit{T\'opicos en relatividad general}.
+\newblock Online, \url{https://github.com/gfrubi/RG}, April 2016.
+
+\bibitem{gr2}
+Guillermo Rubilar.
+\newblock \textit{Electrodin\'amica}.
+\newblock Online, \url{https://github.com/gfrubi/electrodinamica}, October
+  2017.
+
+\bibitem{Steinhoff-Puetzfeld}
+Jan Steinhoff and Dirk Puetzfeld.
+\newblock Multipolar equations of motion for extended test bodies in general
+  relativity.
+\newblock {\em Phys. Rev. D}, 81:044019, Feb 2010.
+
+\bibitem{Steinhoff-Puetzfeld-2}
+Jan Steinhoff and Dirk Puetzfeld.
+\newblock Influence of internal structure on the motion of test bodies in
+  extreme mass ratio situations.
+\newblock {\em Phys. Rev. D}, 86:044033, Aug 2012.
+
+\bibitem{Hans}
+Hans Stephani.
+\newblock {\em Relativity: An Introduction to Special and General Relativity}.
+\newblock Cambridge, third edition edition, 2004.
+
+\bibitem{Tulczyjew}
+W.~Tulczyjew.
+\newblock Motion of multipole particles in general relativity theory.
+\newblock {\em Acta Physica Polonica}, XVIII, 1959.
+
+\bibitem{Dixon1}
+Hermann~Bondi W.~G.~Dixon.
+\newblock Dynamics of extended bodies in general relativity. i. momentum and
+  angular momentum.
+\newblock {\em Proceedings of the Royal Society of London A.}, 314, 1970.
+
+\bibitem{Dixon2}
+Hermann~Bondi W.~G.~Dixon.
+\newblock Dynamics of extended bodies in general relativity. ii. moments of the
+  charge-current vector.
+\newblock {\em Proceedings of the Royal Society of London A.}, 319, 1970.
+
+\bibitem{Dixon3}
+Hermann~Bondi W.~G.~Dixon.
+\newblock Dynamics of extended bodies in general relativity. iii. equation of
+  motion.
+\newblock {\em Philosophical transactions of the Royal Society of London.
+  Series A}, 277, 1974.
+
+\bibitem{Steven}
+Steven Weinberg.
+\newblock {\em Gravitation and Cosmology: Principles and Applications of the
+  General Theory of Relativity}.
+\newblock Massachusetts Institute of Technology, 1972.
+
+\end{thebibliography}

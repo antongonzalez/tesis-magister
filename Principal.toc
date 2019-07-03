@@ -1,0 +1,51 @@
+\babel@toc {spanish}{}
+~\hfill \textbf {P\'agina}\par 
+\contentsline {chapter}{Lista de figuras}{IV}{section*.2}
+\contentsline {chapter}{Resumen}{V}{section*.2}
+\contentsline {chapter}{Introducci\'on}{VI}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Electrodin\IeC {\'a}mica}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Ecuaciones de Maxwell}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Formulaci\IeC {\'o}n covariante}{4}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Tensor dual}{5}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}Fuerzas de marea}{6}{section.1.3}
+\contentsline {section}{\numberline {1.4}Expansi\IeC {\'o}n multipolar}{8}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Dipolo magn\IeC {\'e}tico}{10}{subsection.1.4.1}
+\contentsline {chapter}{\numberline {2}Relatividad General}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Gravedad}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}Ecuaciones de campo}{15}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Soluci\IeC {\'o}n de Kerr}{15}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Ecuaci\IeC {\'o}n de desv\IeC {\'\i }o geod\IeC {\'e}sico}{16}{section.2.3}
+\contentsline {section}{\numberline {2.4}Campos gravitacionales d\IeC {\'e}biles}{19}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Expansi\IeC {\'o}n a primer orden}{20}{subsection.2.4.1}
+\contentsline {subsubsection}{M\IeC {\'e}trica inversa}{20}{section*.11}
+\contentsline {subsubsection}{Conexi\IeC {\'o}n}{20}{section*.12}
+\contentsline {subsubsection}{Tensor de Riemann}{21}{section*.13}
+\contentsline {section}{\numberline {2.5}Expansi\IeC {\'o}n multipolar en GR}{21}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Descomposiciones respecto la velocidad}{23}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Part\IeC {\'\i }cula monopolo}{24}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Part\IeC {\'\i }cula monopolo-dipolo}{25}{subsection.2.5.3}
+\contentsline {subsubsection}{Condiciones suplementarias y cantidades conservadas}{28}{section*.15}
+\contentsline {subsection}{\numberline {2.5.4}Part\IeC {\'\i }cula monopolo-dipolo-cuadrupolo}{29}{subsection.2.5.4}
+\contentsline {chapter}{\numberline {3}Analog\IeC {\'\i }a entre Relatividad General y la Teor\IeC {\'\i }a Electrodin\IeC {\'a}mica Cl\IeC {\'a}sica}{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}\IeC {\textquestiondown }Porqu\IeC {\'e} es importante el estudio de analog\IeC {\'\i }as en F\IeC {\'\i }sica?}{32}{section.3.1}
+\contentsline {section}{\numberline {3.2}Tensores de marea}{33}{section.3.2}
+\contentsline {section}{\numberline {3.3}Ecuaciones de Maxwell}{34}{section.3.3}
+\contentsline {section}{\numberline {3.4}Forma de ``Maxwell" para las ecuaciones de campo gravitacional}{35}{section.3.4}
+\contentsline {section}{\numberline {3.5}Primera comparaci\IeC {\'o}n}{37}{section.3.5}
+\contentsline {section}{\numberline {3.6}Part\IeC {\'\i }culas con esp\IeC {\'\i }n}{39}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Orden dipolar}{39}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Orden cuadrupolar}{40}{subsection.3.6.2}
+\contentsline {section}{\numberline {3.7}\IeC {\textquestiondown }Cu\IeC {\'a}les son las diferencias entre Relatividad General y la teor\IeC {\'\i }a Electromag\IeC {\'e}tica cl\IeC {\'a}sica?}{41}{section.3.7}
+\contentsline {chapter}{\numberline {4}Soluciones circulares a las ecuaciones de movimiento}{43}{chapter.4}
+\contentsline {section}{\numberline {4.1}Fundamentaci\IeC {\'o}n}{44}{section.4.1}
+\contentsline {section}{\numberline {4.2}Planteamiento de las ecuaciones}{46}{section.4.2}
+\contentsline {section}{\numberline {4.3}Soluciones}{47}{section.4.3}
+\contentsline {section}{\numberline {4.4}Propiedades de la soluci\IeC {\'o}n}{50}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclusiones y trabajos futuros}{52}{chapter.5}
+\contentsline {chapter}{\numberline {A}Notaci\IeC {\'o}n y convenciones}{53}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Ecuaciones de movimiento para una part\'icula monopolar}{55}{appendix.Alph2}
+\contentsline {chapter}{\numberline {C}Orden menor en la expansi\'on para una part\'icula monopolo-dipolo}{57}{appendix.Alph3}
+\contentsline {chapter}{\numberline {D}Ecuaciones de movimiento para una part\IeC {\'\i }cula monopolo-dipolo}{59}{appendix.Alph4}
+\contentsline {chapter}{\numberline {E}Cantidades conservadas y evoluci\'on del esp\'in}{61}{appendix.Alph5}
+\contentsline {chapter}{\numberline {F}Transformaci\IeC {\'o}n inversa para los tensores de marea}{63}{appendix.Alph6}
+\contentsline {chapter}{Bibliography}{64}{section*.17}
