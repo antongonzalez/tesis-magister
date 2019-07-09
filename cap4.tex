@@ -4,54 +4,86 @@
 
 \section{Fundamentación}
 
-En \cite{Costa-Natario-Zilhao} se estudia cómo, bajo la condición suplementaria de Mathisson-Pirani y a partir de \eqref{eq:66}, la trayectoria para una paricula con momento angular intrínseco $S$ y modelado hasta orden dipolar en la expansión multipolar (un giróscopo) viene regida por
+En \cite{Costa-Natario-Zilhao} se estudia cómo, bajo la condición suplementaria de Mathisson-Pirani y a partir de \eqref{eq:66}, la trayectoria para una partícula con momento angular intrínseco $S$ y modelada hasta orden dipolar en la expansión multipolar (un giróscopo) viene regida por
 \begin{equation}
 \cd{p^{\mu}} = -\mathbb{H}^{\mu}_{\ \nu} S^{\nu},
 \end{equation}
-donde se define el 4-vector de espín como $S^{\mu} := -\frac{1}{2} \epsilon^{\mu \nu \rho \sigma} S_{\nu \rho} u_{\sigma}$.
+donde se define el 4-vector de espín como $$S^{\mu} := -\frac{1}{2} \epsilon^{\mu \nu \rho \sigma} S_{\nu \rho} u_{\sigma}$$.
 
-Si estamos en un espaciotiempo de Schwarszchild, al ser éste un espaciotiempo de Petrov tipo D, podemos esperar que existan observadores tales que $\mathbb{H}_{\mu \nu}=0$. Así, para una 4-velocidad arbitraria tenemos que las componentes no-nulas del tensor gravito-magético de mareas se reducen a
+Si estamos en un espaciotiempo de Schwarszchild, al ser éste un espaciotiempo de Petrov tipo D, podemos esperar que existan observadores tales que $\mathbb{H}_{\mu \nu}=0$. Así, para una 4-velocidad arbitraria tenemos que las componentes no-nulas del tensor gravito-magnético de mareas \eqref{eq:51} se reducen a
 \begin{align}
 \mathbb{H}_{r \theta} &= \alpha u^{\phi} u^{t},\\
 \mathbb{H}_{\theta t} &= -\alpha u^{\phi} u^{r},\\
 \mathbb{H}_{r \phi} &= \alpha u^{\theta} u^{t},\\
-\mathbb{H}_{\phi t} &= \alpha u^{\theta} u^{r}.
+\mathbb{H}_{\phi t} &= \alpha u^{\theta} u^{r},
 \end{align}
+donde $\alpha=3M\sin\theta /r$.
 
 La condición $u^{\theta} = u^{\phi} = 0$ implica que $\mathbb{H}=0$, permitiendo que la única condición remanente sobre la 4-velocidad es que $u^{\mu} u_{\mu} = 1$. Esto quiere decir que un giróscopo siguiendo una trayectoria radial en un espaciotiempo de Schwarszchild no experimentará ningún efecto producto de las fuerzas de marea.
 
 A partir de lo anterior, se puede estudiar el problema análogo pero en un contexto electromagnético, es decir, la fuerza que experimentará un dipolo magnético producto de una distribución esférica de carga total $Q$ viene determinada por
 \begin{equation}
 \label{eq:magforce}
-\cd{p^{\mu}} = -\mathtt{H}^{\mu}_{\ \nu} \mu^{\nu}.
+\cd{p^{\mu}} = \mathtt{B}^{\ \mu}_{\nu} \mu^{\nu},
 \end{equation}
+donde las componentes no-nulas del tensor magnético de mareas son:
+\begin{align}
+\mathtt{B}_{r \theta} &= \alpha u^{\phi},\\
+\mathtt{B}_{\theta r} &= 2\alpha u^{\phi},\\
+\mathtt{B}_{r \phi} &= -\alpha u^{\theta},\\
+\mathtt{B}_{\phi r} &= -2\alpha u^{\phi},\\
+\mathtt{B}_{\theta \phi} &= \alpha u^{r},\\
+\mathtt{B}_{\phi \theta} &= -\alpha u^{r},
+\end{align}
+y $\alpha=3Q \sin \theta /r$
 
-Siguiendo un análisis similar, la única condición que permite hacer nulas todas las componentes del tensor magnético de mareas es $u^i=0$, es decir, observadores estáticos respecto al dipolo magnético. 
+Siguiendo un análisis similar, la única condición que permite hacer nulas todas las componentes del tensor magnético de mareas es $u^i=0$, es decir, cuando el dipolo magnético se encuentra en reposo respecto a la distribución esférica central.
 
 Es interesante notar que para velocidades radiales, es decir velocidades tales que $u^{\theta} = u^{\phi} = 0$, el tensor magnético de mareas se reduce solo a su parte antisimétrica, y a partir de \eqref{eq:maxwell4} queda en evidencia que esto es producto de que un dipolo magnético en movimiento siempre experimentará un tensor de mareas no-nulo producto de los efectos de inducción magnética, lo cual nuevamente marca una gran diferencia respecto de su contraparte gravitacional.
 
-Es posible realizar un análisis similar en la métrica de Kerr, y si empezamos estudiando el caso electromagnético, la fuerza que experimenta un dipolo magnético producto de una distribución de carga $Q$ con momento angular $J$ viene dada por \eqref{eq:magforce}. 
+Es posible realizar un análisis similar en el caso en que la distribución de carga $Q$ tiene un momento magnético $\mu_s$, así la fuerza que experimenta un dipolo magnético viene dada por \eqref{eq:magforce} Las componentes no-nulas del tensor de mareas en el plano equatorial son:
+\begin{align}
+\mathtt{B}_{r \theta} &= \alpha \left( r^2 Q u^{\phi} - 3\mu_s u^t \right),\\
+\mathtt{B}_{\theta r} &= \alpha \left( 2r^2 Q u^{\phi} - 3\mu_s u^t \right),\\
+\mathtt{B}_{r \phi} &= -\alpha Q r^2 u^{\theta},\\
+\mathtt{B}_{\phi r} &= -2\alpha Q r^2 u^{\theta,}\\
+\mathtt{B}_{t r} &= 3 \alpha \mu_s u^{\theta},\\
+\mathtt{B}_{t \theta} &= 3 \alpha \mu_s u^{r},
+\end{align}
+donde $\alpha = 1/r^3$.
 
-Como es de esperar luego de ver el caso en la métrica de Schwarszchild, no es posible anular completamente el tensor de mareas gravito-magnético, sin embargo la condición que permite anular la parte simétrica de dicho tensor viene dada por $u^r=u^{\theta}=0$ y que
+Análogamente al caso sin momento magnético $\mu_s$, no es posible anular completamente el tensor de mareas magnético, sin embargo la condición que permite anular la parte simétrica de dicho tensor viene dada por $u^r=u^{\theta}=0$ y por
 \begin{equation}
 \label{eq:angular-velocity-em}
-\omega := \dv{\theta}{t} = \frac{J}{MR^2},
+\omega := \dv{\phi}{t} = 2 \frac{\mu_s}{Q r^2} = \frac{J}{Mr^2},
 \end{equation}
-donde $\omega$ es la velocidad angular de la órbita del dipolo.
+donde $\omega$ es la velocidad angular de la órbita del dipolo, y en la última igualdad se ha usado la relación entre el momento magnético y el momento angular de la distribución.
 
-Es decir, para órbitas circulares tales que el dipolo tenga una velocidad angular igual a \eqref{eq:angular-velocity-em}, entonces $\mathtt{B}_{\mu \nu} = \mathtt{B}_{[\mu \nu]}$, y así un dipolo magnético siguiendo una trayectoria con tales características siempre experimentará una fuerza producto del campo externo.
+De esta forma, para órbitas circulares tales que el dipolo tenga una velocidad angular igual a \eqref{eq:angular-velocity-em}, el tensor de mareas se reduce a su parte antisimétrica $\mathtt{B}_{\mu \nu} = \mathtt{B}_{[\mu \nu]}$, y así un dipolo magnético siguiendo una trayectoria con tales características siempre experimentará una fuerza producto del campo externo.
 
-\begin{figure}[!h]
+\begin{figure}[!ht]
 \centering
 \includegraphics[scale=0.9]{images/solucion-en-kerr.pdf}
 \caption[Solución helicoidal en Kerr]{Representación esquemática del sistema agujero negro-dipolo.}
 \label{fig:7}
 \end{figure}
 
-Si estudiamos ahora el análogo gravitacional del problema, es decir, un giróscopo orbitando alrededor de un agujero negro rotante (ver figura \ref{fig:7}), las condiciones que permiten anular el tensor gravito-magnético de mareas son que $u^{\theta}=0$ y 
+Si estudiamos ahora el análogo gravitacional del problema, es decir, un giróscopo orbitando alrededor de un agujero negro rotante (ver figura \ref{fig:7}), las componentes no-nulas del tensor gravito-magnético de mareas en el plano ecuatorial son:
+\begin{align}
+\mathbb{H}_{r \theta} &= \alpha \left[\left(2a^2+r^2\right) u^{\phi} u^t - a\left( a^2+r^2 \right) \left( u^{\phi} \right)^2 - a\left( u^t \right)^2  \right],\\
+\mathbb{H}_{r \phi} &= \alpha \left( a^2+r^2 \right) \left( au^{\phi} - u^t \right)u^{\theta},\\
+\mathbb{H}_{r t} &= \alpha a \left( au^{\phi} - u^t \right)u^{\theta},\\
+\mathbb{H}_{\theta \phi} &= \alpha a \left[ \left( a^2+r^2 \right) u^{\theta} - au^t \right] u^r,\\
+\mathbb{H}_{\theta t} &= -\alpha \left[ \left( a^2+r^2 \right) u^{\theta} - au^t \right] u^r,\\
+\mathbb{H}_{\phi \phi} &= \mathbb{H}_{tt} = -2\alpha a u^r u^{\theta}, \\
+\mathbb{H}_{\phi t} &= \alpha \left( 2a^2 + r^2 \right) u^r u^{\theta},
+\end{align}
+donde ahora $\alpha= 3M/r^3$.
+
+Se puede apreciar que, a diferencia del caso electromagnético, si es posible anular completamente el tensor de mareas. Las condiciones necesarias para ésto son que $u^{\theta}=0$ y  que
 \begin{equation}
 \label{eq:68}
-\omega := \dv{\phi}{t} = \frac{a}{a^2 + R^2},
+\omega := \dv{\phi}{t} = \frac{a}{a^2 + r^2},
 \end{equation}
 donde nuevamente $\omega$ representa la velocidad angular de la órbita.
 
@@ -67,9 +99,9 @@ Esto nos lleva a la pregunta de si existen geodésicas tales que las condiciones
 \omega_{\mathrm{geo}} = \frac{1}{a + \sqrt{\frac{r^3}{M}}}.
 \end{equation}
 
-Luego, de \eqref{eq:68} y \eqref{eq:angular-velocity-geodesic} se puede determinar el radio de la órbita, mostrando que ésta se debería encontrar dentro del horizonte de eventos, lo que nos permite demostrar que no existen geodésicas circulares tales que $\mathbb{H}_{\mu \nu}=0$. 
+Al igualar \eqref{eq:68} y \eqref{eq:angular-velocity-geodesic} se puede determinar que el radio de la órbita es $R=a^2/M$. Siendo éste el único radio compatible con una geodésica que satisfaga las condiciones ésta se debería encontrar dentro del horizonte de eventos, lo que nos permite demostrar que no existen geodésicas circulares tales que $\mathbb{H}_{\mu \nu}=0$
 
-No obstante, de \eqref{eq:69} se puede plantar la siguiente interrogante: ¿existen soluciones circulares para \eqref{eq:69}?.
+Habiendo descartado la existencia de geodésicas que satisfagan las condiciones anteriormente planteadas, una pregunta remamente es si existen soluciones, no necesariamente geodésicas, que sean soluciones a \eqref{eq:69} y cumplan dichas condiciones.
 
 \section{Planteamiento de las ecuaciones}
 

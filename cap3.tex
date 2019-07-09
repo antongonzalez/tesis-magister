@@ -364,7 +364,21 @@ En este orden se puede observar una clara diferencia entre ambas ecuaciones de e
 
 Así, podemos separar el tensor de Riemann en dos partes, $R_{\mu \nu \xi \sigma} u^{\xi} u_{\rho}$ que preserva la analogía puesto que puede ser reescrito completamente en términos de los tensores de marea, y $\bar{R}_{\mu \nu \rho \sigma}$ que no puede ser reescrito en términos de los tensores de marea.
 
-No hay razones para esperar se cumpla la perfecta correspondencia entre los términos dipolares a ordenes superiores.
+Además, lo mismo ocurre si consideramos las ecuaciones que determinan la evolución del tensor de espín, así de \eqref{eq:espin-4polo} y se puede observar que
+\begin{align}
+\cd{S^{\mu \nu}} &= 2p^{[\mu} u^{\nu]} - \frac{4}{3} g^{\delta [ \mu} I^{\nu] \gamma \rho \sigma} R_{\gamma \rho \xi \delta} u^{\xi} u_{\sigma} + \frac{4}{3} g^{\delta [ \mu} I^{\nu] \gamma \rho \sigma} \bar{R}_{\gamma \rho \sigma \delta} \nonumber\\
+&= 2p^{[\mu} u^{\nu]} - \frac{4}{3} g^{\delta [ \mu} I^{\nu] \gamma \rho \sigma} \epsilon_{\gamma \rho \alpha \beta} \mathbb{H}^{\rho}_{\ \delta} u^{\beta} + \frac{8}{3} g^{\delta [ \mu} I^{\nu] \gamma \rho \sigma} u_{[\gamma} \mathbb{E}_{\rho] \delta} + \frac{4}{3} g^{\delta [ \mu} I^{\nu] \gamma \rho \sigma} \bar{R}_{\gamma \rho \sigma \delta}. \label{eq:espin-grav}
+\end{align}
+
+Mientras que en el contexto electromagnético, de \eqref{eq:112} se puede observar que
+\begin{align}
+\cd{S^{\mu \nu}} &= 2p^{[\mu} u^{\nu]} + \eta^{\mu \sigma} m^{\nu \rho \alpha} \partial_{\rho} F_{\sigma \alpha} \nonumber \\
+&=  2p^{[\mu} u^{\nu]} + \eta^{\mu \sigma} m^{\nu \rho \alpha} \epsilon_{\sigma \alpha \delta \gamma} \mathit{B}^{\delta}_{\ \rho} u^{\gamma} - 2\eta^{\mu \sigma} m^{\nu \rho \alpha} u_{[\sigma} \mathit{E}_{\alpha] \rho}. \label{eq:espin-em}
+\end{align}
+
+Obteniendo así, de \eqref{eq:espin-grav} y \eqref{eq:espin-em}, la misma conclusión que para el caso de las ecuaciones de evolución del 4-momentum.
+
+No hay razones para esperar se cumpla la perfecta correspondencia al igual que entre los términos dipolares para ordenes superiores.
 
 \section{¿Cuáles son las diferencias entre Relatividad General y la teoría Electromagética clásica?}
 
