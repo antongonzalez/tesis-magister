@@ -6,7 +6,17 @@ En el desarrollo de la presente tesis se utilizó el siguiente conjunto de notac
 \begin{itemize}
 \item Las coordenadas de los elementos se denotan como $x^{\mu}=\left( x^0, x^1, x^2, x^3 \right)$, donde $x^0$ corresponde a la coordenada temporal.
 \item Usamos la convención $\eta_{\mu \nu} = \mathrm{diag}(1,-1,-1,-1)$.
-\item $\epsilon_{\mu \nu \rho \sigma}$ denota el pseudo-tensor totalmente antisimétrico de Levi-Civita definido como $\epsilon_{0123}=-1$ y tal que $\epsilon^{\mu \nu \rho \sigma} := g^{\mu \alpha} g^{\nu \beta} g^{\rho \gamma} g^{\sigma \delta} \epsilon_{\alpha \beta \gamma \delta}$.
+\item Se define el tensor totalmente antisimétrico de Levi-Civita como $\epsilon_{\mu \nu \rho \sigma} := \sqrt{-g} \hat{\epsilon}_{\mu \nu \rho \sigma}$ y tal que $\hat{\epsilon}_{\mu \nu \rho \sigma}$ es el símbolo totalmente antisimétrico de Levi-Civita donde $\hat{\epsilon}_{0123} = \hat{\epsilon}^{0123} = 1$.
+
+Además, se define el tensor contravariante $\epsilon^{\mu \nu \rho \sigma} := g^{\mu \alpha} g^{\nu \beta} g^{\rho \gamma} g^{\sigma \delta} \epsilon_{\alpha \beta \gamma \delta} = \frac{1}{\sqrt{-g}} \hat{\epsilon}^{\mu \nu \rho \sigma}$.
+
+El tensor de Levi-Civita satisface las siguientes propiedades
+\begin{align*}
+\epsilon^{\mu \nu \rho \sigma} \epsilon_{\mu \nu \rho \sigma} &= -24,\\
+\epsilon^{\mu \nu \rho \sigma} \epsilon_{\alpha \nu \rho \sigma} &= -6 \delta^{\mu}_{\ \alpha},\\
+\epsilon^{\mu \nu \rho \sigma} \epsilon_{\alpha \beta \rho \sigma} &= -2 \left( \delta^{\mu}_{\ \alpha} \delta^{\nu}_{\ \beta} - \delta^{\mu}_{\ \beta} \delta^{\nu}_{\ \alpha} \right),\\
+\epsilon^{\mu \nu \rho \sigma} \epsilon_{\alpha \beta \gamma \sigma} &= - 2\left( \delta^{\mu}_{\ \alpha}\delta^{[\nu}_{\ \beta}\delta^{\rho]}_{\ \gamma} + \delta^{\mu}_{\ \gamma}\delta^{[\nu}_{\ \alpha}\delta^{\rho]}_{\ \beta} + \delta^{\mu}_{\ \beta}\delta^{[\nu}_{\ \gamma}\delta^{\rho]}_{\ \alpha} \right),
+\end{align*}
 \item Usamos letras del alfabeto griego $\mu, \nu, \rho, \dots$ para referirnos a índices espaciotemporales 4-dimensionales que varían de 0 a 3, y letras del abecedario latino $i, j, k, \dots$ para referirnos a índices espaciales que varían de 1 a 3.
 \item Se utiliza la convención de suma de Einstein, es decir, cuando dos índices se encuentra repetidos en el mismo término, existe una sumatoria de 0 a 3 o de 1 a 3 dependiendo si son índices del alfabeto griego o latino.
 \item Se utilizan unidades gausiannas\footnote{\url{https://en.wikipedia.org/wiki/Gaussian_units}} con $c=1$.
@@ -17,7 +27,7 @@ En el desarrollo de la presente tesis se utilizó el siguiente conjunto de notac
 \end{equation}
 \item El tensor de curvatura de Riemann definido como 
 \begin{equation}
-R^{\alpha}_{\ \beta \mu \nu} = \partial_{\mu} \Gamma^{\alpha}_{\beta \nu} - \partial_{\nu} \Gamma^{\alpha}_{\beta \mu} + \Gamma^{\alpha}_{\delta \mu} \Gamma^{\delta}_{\beta \nu} - \Gamma^{\alpha}_{\delta \nu} \Gamma^{\delta}_{\beta \mu}.
+R_{\mu \nu \beta}^{\ \ \ \ \alpha} =-R^{\alpha}_{\ \beta \mu \nu} = \partial_{\mu} \Gamma^{\alpha}_{\beta \nu} - \partial_{\nu} \Gamma^{\alpha}_{\beta \mu} + \Gamma^{\alpha}_{\delta \mu} \Gamma^{\delta}_{\beta \nu} - \Gamma^{\alpha}_{\delta \nu} \Gamma^{\delta}_{\beta \mu}.
 \end{equation}
 \item El tensor de Ricci está definido como
 \begin{equation}

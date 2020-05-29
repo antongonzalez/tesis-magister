@@ -1,0 +1,39 @@
+\chapter{Tensor de Riemann en términos de los tensors de marea}
+\label{ape:h}
+
+Introduciendo la parte magnética-magnética del tensor de Riemann \eqref{eq:mag-mag}, es posible reconstruir de forma completa el tensor de Riemann usando $\left\{ \mathbb{E}, \mathbb{H}, \mathbb{F} \right\}$. A partir de $\mathbb{F}_{\mu \nu}$ podemos observar la siguiente relación
+\begin{align}
+\epsilon^{\xi \delta \mu \eta} \mathbb{F}_{\mu \nu} u_{\eta} &= \frac{1}{4} \left( \epsilon_{\gamma \lambda \mu \alpha} \epsilon^{\xi \delta \mu \eta} \right) \epsilon_{\sigma \rho \nu \beta} R^{\gamma \lambda \sigma \rho} u^{\alpha} u^{\beta} u_{\eta} \nonumber \\
+&= -\frac{1}{2} \epsilon_{\sigma \rho \nu \beta} R^{\gamma \lambda \sigma \rho} u^{\alpha} u^{\beta} u_{\eta} \left[  \delta_{\alpha}^{\ \xi} \delta_{\gamma}^{\ \delta} \delta_{\lambda}^{\ \eta} + \delta_{\alpha}^{\ \eta} \delta_{\gamma}^{\ \xi} \delta_{\lambda}^{\ \delta} + \delta_{\alpha}^{\ \delta} \delta_{\gamma}^{\ \eta} \delta_{\lambda}^{\ \xi} \right] \nonumber \\
+&= -\frac{1}{2} \epsilon_{\sigma \rho \nu \beta} u^{\beta} \left[ R^{\delta \eta \sigma \rho} u^{\xi} u_{\eta} + R^{\xi \delta \sigma \rho} + R^{\eta \xi \sigma \rho} u^{\delta} u_{\eta}  \right]
+\end{align}
+
+Note que el único índice libre de $\mathbb{F}$ es $\nu$, si contraemos dicho índice de forma similar a lo anterior obtenemos que
+\begin{align}
+\epsilon^{\gamma \lambda \nu \alpha} \epsilon^{\xi \delta \mu \eta} F_{\mu \nu} u_{\eta} u_{\alpha} &= -\frac{1}{2} \epsilon^{\gamma \lambda \nu \alpha} \epsilon_{\sigma \rho \nu \beta} u_{\alpha} u^{\beta} \left[ R^{\delta \eta \sigma \rho} u^{\xi} u_{\eta} + R^{\xi \delta \sigma \rho} + R^{\eta \xi \sigma \rho} u^{\delta} u_{\eta}  \right] \nonumber \\
+&=  u_{\alpha} u^{\beta} \left[ R^{\delta \eta \sigma \rho} u^{\xi} u_{\eta} + R^{\xi \delta \sigma \rho} + R^{\eta \xi \sigma \rho} u^{\delta} u_{\eta}  \right] \left[ \epsilon^{\gamma \lambda \nu \alpha} \epsilon_{\sigma \rho \nu \beta} \right] \nonumber \\
+&= u_{\alpha} u^{\beta} \left[ R^{\delta \eta \sigma \rho} u^{\xi} u_{\eta} + R^{\xi \delta \sigma \rho} + R^{\eta \xi \sigma \rho} u^{\delta} u_{\eta}  \right]
+\left[ \delta_{\beta}^{\ \gamma} \delta_{\sigma}^{\ \lambda} \delta_{\rho}^{\ \alpha} + \delta_{\beta}^{\ \alpha} \delta_{\sigma}^{\ \gamma} \delta_{\rho}^{\ \lambda} + \delta_{\beta}^{\ \lambda} \delta_{\sigma}^{\ \alpha} \delta_{\rho}^{\ \gamma} \right] \nonumber \\
+&= R^{\delta \eta \lambda \alpha} u_{\alpha} u^{\gamma} u^{\xi} u_{\eta} + R^{\delta \eta \alpha \gamma} u_{\alpha} u^{\lambda} u^{\xi} u_{\eta} + R^{\eta \xi \lambda \alpha} u_{\alpha} u^{\gamma} u^{\delta} u_{\eta} + R^{\eta \xi \alpha \gamma} u_{\alpha} u^{\lambda} u^{\delta} u_{\eta} \nonumber \\
+& \quad + R^{\delta \eta \gamma \lambda} u^{\xi} u_{\eta} + R^{\xi \delta \lambda \eta} u^{\gamma} u_{\eta} + R^{\xi \delta \eta \gamma} u^{\lambda} u_{\eta} + R^{\eta \xi \gamma \lambda} u^{\delta} u_{\eta} + R^{\xi \delta \gamma \lambda}. \label{eq:h2}
+\end{align}
+
+Como los tensores gravito-eléctricos y gravito-magnéticos de marea satisfacen que
+\begin{equation}
+R^{\alpha \beta \gamma \xi} u_{\xi} = \epsilon^{\alpha \beta \mu \sigma} \mathbb{H}_{\mu}^{\ \gamma} u_{\sigma} - 2 u^{[ \alpha} \mathbb{E}^{\beta ] \gamma} ,
+\end{equation}
+podemos reescribir \eqref{eq:h2} como
+\begin{align}
+\epsilon^{\gamma \lambda \nu \alpha} \epsilon^{\xi \delta \mu \eta} \mathbb{F}_{\mu \nu} u_{\alpha} u_{\eta} &= R^{\xi \delta \gamma \lambda} + 4 u^{[ \xi} \mathbb{E^{\delta] [\gamma}} u^{\lambda]} 
+ + 2\left[ \epsilon^{\gamma \lambda \mu \sigma} \mathbb{H}_{\mu}^{\ [ \delta} u^{\xi ]} + \epsilon^{\delta \xi \mu \sigma} \mathbb{H}_{\mu}^{\ [ \gamma} u^{\lambda ]} \right] u_{\sigma}, \label{eq:h3}
+\end{align}
+donde usamos la siguiente identidad
+\begin{equation}
+u^{[\gamma} \mathbb{E}^{\lambda][\delta} u^{\xi ]} \equiv u^{[\delta} \mathbb{E}^{\xi][\gamma} u^{\lambda ]}.
+\end{equation}
+
+A partir de \eqref{eq:h3} podemos escribir todas las componentes del tensor de Riemann como
+\begin{equation}
+R^{\xi \delta \gamma \lambda} = \epsilon^{\gamma \lambda \nu \alpha} \epsilon^{\xi \delta \mu \eta} \mathbb{F}_{\mu \nu} u_{\alpha} u_{\eta} - 4 u^{[ \xi} \mathbb{E^{\delta] [\gamma}} u^{\lambda]} 
+ - 2\left[ \epsilon^{\gamma \lambda \mu \sigma} \mathbb{H}_{\mu}^{\ [ \delta} u^{\xi ]} + \epsilon^{\delta \xi \mu \sigma} \mathbb{H}_{\mu}^{\ [ \gamma} u^{\lambda ]} \right] u_{\sigma},
+\end{equation}

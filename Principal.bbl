@@ -68,6 +68,12 @@ Christian Heinicke and Friedrich~W. Hehl.
   introduction}.
 \newblock {\em Int. J. Mod. Phys.}, D24(02):1530006, 2014.
 
+\bibitem{Costa-Herdeiro-Natario-Zilhao}
+L~Costa, Carlos Herdeiro, Jose Natario, and Miguel Zilhão.
+\newblock Mathisson’s helical motions for a spinning particle: Are they
+  unphysical?
+\newblock {\em Physical Review D}, 85:024001, 01 2012.
+
 \bibitem{Costa-Natario-Zilhao}
 L.~Filipe~O. Costa, Jos\'e Nat\'ario, and Miguel Zilh\~ao.
 \newblock Spacetime dynamics of spinning particles: Exact electromagnetic
@@ -124,22 +130,24 @@ W.~Tulczyjew.
 \newblock Motion of multipole particles in general relativity theory.
 \newblock {\em Acta Physica Polonica}, XVIII, 1959.
 
+\bibitem{Costa-Semerak}
+L.~Filipe~O. Costa, Georgios Lukes-Gerakopoulos, and Old\ifmmode
+  \check{r}\else~\v{r}\fi{}ich Semer\'ak.
+\newblock Spinning particles in general relativity: Momentum-velocity relation
+  for the mathisson-pirani spin condition.
+\newblock {\em Phys. Rev. D}, 97:084023, Apr 2018.
+
 \bibitem{Steinhoff-Puetzfeld-2}
 Jan Steinhoff and Dirk Puetzfeld.
 \newblock Influence of internal structure on the motion of test bodies in
   extreme mass ratio situations.
 \newblock {\em Phys. Rev. D}, 86:044033, Aug 2012.
 
-\bibitem{Matolcsi}
-Tam{\'a}s Matolcsi, M{\'a}t{\'e} Matolcsi, and Tam{\'a}s Tasn{\'a}di.
-\newblock On the relation of thomas rotation and angular velocity of reference
-  frames.
-\newblock {\em General Relativity and Gravitation}, 39(4):413--426, Apr 2007.
-
-\bibitem{Costa-Herdeiro-Natario-Zilhao}
-L~Costa, Carlos Herdeiro, Jose Natario, and Miguel Zilhão.
-\newblock Mathisson’s helical motions for a spinning particle: Are they
-  unphysical?
-\newblock {\em Physical Review D}, 85:024001, 01 2012.
+\bibitem{Cherubini}
+Christian Cherubini, Donato Bini, Salvatore Capozziello, and Remo Ruffini.
+\newblock Second order scalar invariants of the riemann tensor: Applications to
+  black hole spacetimes.
+\newblock {\em International Journal of Modern Physics D}, 11(06):827–841,
+  Jul 2002.
 
 \end{thebibliography}

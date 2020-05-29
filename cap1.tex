@@ -58,7 +58,7 @@ obteniendo la ecuación de continuidad.
 
 \section{Formulación covariante}
 
-En el año 1905, el físico alemán Albert Einstein (1879-1955) presentó por primera vez en su trabajo titulado \textit{Zur Elektrodynamik Bewegter Körper} \cite{Einstein} (``Sobre la electrodinámica de los cuerpos en movimiento'') su Teoría Especial de la Relatividad basada en dos postulados, los cuales eran:
+En el año 1905, el físico alemán Albert Einstein (1879-1955) presentó por primera vez en su trabajo titulado \textit{Zur Elektrodynamik Bewegter Körper} \cite{Einstein} (``Sobre la electrodinámica de los cuerpos en movimiento'') su Teoría Especial de la Relatividad basada en dos postulados, los cuales son:
 \begin{itemize}
 \item[1)] Las leyes de la Física son invariantes en todos los sistemas de referencia inerciales.
 \item[2)] La velocidad de la luz en el vacío es igual para todos los observadores, independiente del movimiento de la fuente de luz.
@@ -66,13 +66,13 @@ En el año 1905, el físico alemán Albert Einstein (1879-1955) presentó por pr
 
 Pese a las inconsistencias de su teoría con la mecánica newtoniana, el trabajo de Einstein logró solucionar uno de los mayores problemas de la época, pero antes de explicarlo es necesario ponernos en contexto.
 
-Como se muestra anteriormente, Maxwell logra unificar con sus ecuaciones toda la teoría electromagnética en 4 ecuaciones el año 1865. Sin embargo dichas ecuaciones presentaban un problema, y era que éstas no eran invariantes bajo transformaciones de Galileo. Esto quiere decir que, si consideramos un observador inercial $O$ y otro observador $O'$ moviéndose con velocidad constante $\vb{v}$ respecto a $O$, las ecuaciones de Maxwell respecto a $O'$ son diferentes y, por ende, implicaría la existencia de observadores privilegiados en el Universo, lo cual va en contra del primer principio mostrado anteriormente. 
+Como se muestra anteriormente, Maxwell logra unificar con sus ecuaciones toda la teoría electromagnética en 4 ecuaciones el año 1865. Sin embargo dichas ecuaciones presentaban un problema, y era que estas no eran invariantes bajo transformaciones de Galileo. Esto quiere decir que, si consideramos un observador inercial $O$ y otro observador $O'$ moviéndose con velocidad constante $\vb{v}$ respecto a $O$, las ecuaciones de Maxwell respecto a $O'$ son diferentes y, por ende, implicaría la existencia de observadores privilegiados en el Universo, lo cual va en contra del primer principio mostrado anteriormente. 
 
 Bajo esta lógica, las ecuaciones de Maxwell debieran ser erróneas, pero en todos los experimentos en los cuales se les ponía a prueba, no se logra evidenciar inconsistencias entre las ecuaciones y los resultados experimentales, dando a entender que las predicciones hechas por dichas ecuaciones eran correctas. El problema era simple, las ecuaciones de Maxwell eran incorrectas o las transformaciones que se utilizaban para relacionar los observadores $O$ y $O'$ lo eran.
 
-No fue hasta que Einstein presenta su teoría en donde muestra las transformaciones de Lorentz como medio para relacionar observadores inerciales, y cómo éstas mantienen la invariancia de las ecuaciones de Maxwell.
+No fue hasta que Einstein presenta su teoría en donde muestra las transformaciones de Lorentz como medio para relacionar observadores inerciales, y cómo estas mantienen la invariancia de las ecuaciones de Maxwell.
 
-Al pasar los años, varios experimentos han logrado corroborar la teoría de Relatividad Especial (SR por sus siglas en inglés), explicando así efectos de los cuales antes no se conocía su existencia, como por ejemplo la dilatación temporal.
+Al pasar los años, varios experimentos han logrado corroborar la teoría de Relatividad Especial (SR por sus siglas en inglés), prediciendo así efectos de los cuales antes no se conocía su existencia, como por ejemplo la dilatación temporal.
 
 Por otro lado, y pese a que la teoría de SR permitía solucionar el problema de las ecuaciones de Maxwell, también era necesario asegurar que la teoría electromagnética fuera compatible con los principios que Einstein postuló en su teoría. Por esta razón se define el \textit{tensor de Faraday}
 \begin{equation}
@@ -96,11 +96,11 @@ Así mismo, también es posible reescribir las ecuaciones homogéneas de Maxwell
 \partial_{[\mu} F_{\nu \lambda]} = 0.
 \end{equation}
 
-Condensando las cuatro ecuaciones de Maxwell en \eqref{eq:1} y \eqref{eq:2}.
+Condensando así las cuatro ecuaciones de Maxwell presentadas anteriormente en \eqref{eq:1} y \eqref{eq:2}.
 
 \subsection{Tensor dual}
 
-Otra forma de escribir \eqref{eq:2} con el fin de que se parezca más a \eqref{eq:1}, es introduciendo la definición del tensor dual. 
+Otra forma de escribir \eqref{eq:2} con el fin de que se asemeje más a \eqref{eq:1}, es introduciendo la definición del tensor dual. 
 
 Sea $A^{\mu \nu}$ un tensor bajo transformaciones generales de coordenadas, se define el dual como
 \begin{equation}
@@ -108,12 +108,12 @@ Sea $A^{\mu \nu}$ un tensor bajo transformaciones generales de coordenadas, se d
 \end{equation}
 donde $\epsilon^{\mu \nu \lambda \rho}$ es el pseudo-tensor de Levi-civita definido en el Apéndice \ref{ape:convenciones}.
 
-También notamos que es posible obtener la relación inversa, es decir, a partir del tensor dual obtener el tensor original
+También notamos que es posible obtener la relación inversa, es decir, a partir del tensor dual recuperar el tensor original
 \begin{equation}
 A^{\mu \nu} = -\frac{1}{2} \epsilon^{\mu \nu \lambda \rho} \dual{A}_{\lambda \rho}.
 \end{equation}
 
-De lo anterior, el tensor electromagnético dual es
+Así el tensor electromagnético dual es
 \begin{equation}
 \label{eq:3}
 \dual{F}^{\mu \nu} := \mqty*(
@@ -123,7 +123,7 @@ B^y & E^z & 0 & -E^x \\
 B^z & -E^y & E^x & 0 \\ 
 ),
 \end{equation}
-lo cual, en este caso, es equivalente a reemplazar $\vb{E}$ por $\vb{B}$ y viceversa.
+lo que, en este caso, es equivalente a reemplazar $\vb{E}$ por $\vb{B}$ y viceversa.
 
 Finalmente, de las ecuaciones homogéneas de Maxwell pueden ser escritas usando el tensor dual como
 \begin{equation}
@@ -134,7 +134,7 @@ siendo esta forma muy similar a \eqref{eq:1}.
 \section{Fuerzas de marea}
 \label{sec:1}
 
-En mecánica newtoniana, usamos el término \textbf{fuerzas de marea} para referirnos a los efectos de las inhomoeneidades del campo gravitacional (el cual produce diferentes aceleraciones en masas de prueba ubicadas en diferentes puntos del espacio). Por ejemplo, si consideramos dos masas puntuales de prueba, en caída libre y separadas una distancia infinitesimal, un observador en caída libre junto a ellas apreciará que, mientras están cayendo, éstas se acercan entre sí experimentando una aparente fuerza entre ellas.
+En mecánica newtoniana, usamos el término \textbf{fuerzas de marea} para referirnos a los efectos de las inhomoeneidades del campo gravitacional (el cual produce diferentes aceleraciones en masas de prueba ubicadas en diferentes puntos del espacio). Por ejemplo, si consideramos dos masas puntuales de prueba, en caída libre y separadas una distancia infinitesimal, un observador en caída libre junto a ellas apreciará que, mientras están cayendo, estas se acercan entre sí experimentando una aparente fuerza entre ellas.
 
 Siguiendo el ejemplo anterior, sean $\vb{x}_1$ y $\vb{x}_2$ las posiciones de ambas masas de prueba, y tales que $\vb{x}_2 = \vb{x}_1 + \delta \vb{x}$, la aceleración con la que ambas masas caen son $g_i[\vb{x}_1]$ y $g_i[\vb{x}_2]$ respectivamente (ver figura \ref{fig:4}). 
 \begin{figure}[h!]
@@ -189,12 +189,12 @@ es decir, la 4-velocidad de las cargas definida como $u^{\mu}_{1,2} := \mathrm{d
 \label{eq:6}
 \dv[2]{ }{\tau} \delta x^{\mu} = \frac{q}{m} \left( \partial_{\gamma} F^{\mu}_{\ \nu} \right) u^{\nu} \delta x^{\gamma},
 \end{equation}
-que representa las inhomogeneidades del campo electromagnético.
+que representa las inhomogeneidades del campo electromagnético y, como es de esperar, presenta una clara similitud con \eqref{eq:122}. Esto es por que tanto \eqref{eq:122} como \eqref{eq:6} son la aceleración relativa entre ambas partículas de prueba, el primero en el contexto de Relatividad General y el segundo en el de la teoría electromagnética clásica.
 
 \section{Expansión multipolar}
 \label{sec:2}
 
-Si consideramos una distribución compacta de carga y corriente respectivamente, podemos hacer uso del método de expansión multipolar para calcular los valores del potencial escalar y vectorial en todos los puntos del espacio. Para esto es necesario describir todos los puntos de la distribución en cuestión respecto un punto de referencia $O$ (usualmente elegido en un punto al interior de ésta). Entonces para un punto lejano $\vb{x}$ (es decir, a una distancia mucho más grande que el tamaño de la distribución) escribimos los potenciales como una suma infinita de términos descritos en términos de $\vb{x}'$ (los cuales representan los puntos de la distribución respecto al punto $O$) y finalmente, bajo la hipótesis de que $|\vb{x}| \gg |\vb{x}'|$, introducimos la definición de los momentos multipolares para cada elemento de la expansión.
+Si consideramos una distribución compacta de carga y corriente respectivamente, podemos hacer uso del método de expansión multipolar para calcular los valores del potencial escalar y vectorial en todos los puntos del espacio. Para esto es necesario describir todos los puntos de la distribución en cuestión respecto un punto de referencia $O$ (usualmente elegido en un punto al interior de esta). Así, para un punto lejano $\vb{x}$ (es decir, a una distancia mucho más grande que el tamaño de la distribución), escribimos los potenciales como una suma infinita de términos descritos en términos de $\vb{x}'$ (los cuales representan los puntos de la distribución respecto al punto $O$) y finalmente, bajo la hipótesis de que $|\vb{x}| \gg |\vb{x}'|$, introducimos la definición de los momentos multipolares para cada elemento de la expansión.
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=1]{images/multipolar.pdf}
@@ -232,7 +232,7 @@ y así reescribir el potencial vectorial como
 A_a(\vb{x}) = \sum_{n=0}^{\infty} \frac{(-1)^n}{n!} M_{a_1 a_2 \dots a_n b} \partial_{a_1} \partial_{a_2} \dots \partial_{a_n} \frac{1}{r}.
 \end{equation}
 
-Podemos entender lo anterior como dos expansiones multipolares diferentes, una para el caso eléctrico y otra para el caso magnético, sin embargo, es posible reformular dichas expansiones a fin de introducir el tensor de Faraday y con ello obtener una versión relativista para dicha expansión.
+Podemos entender lo anterior como dos expansiones multipolares diferentes, una para el caso eléctrico y otra para el caso magnético. Sin embargo, es posible reformular dichas expansiones a fin de introducir el tensor de Faraday y con ello obtener una versión relativista para dicha expansión.
 
 A partir de la fuerza de Lorentz podemos ver que
 \begin{equation}
@@ -270,11 +270,13 @@ F^{\mathrm{EM}}_{\mu} = F_{\mu \nu}[X] M^{\nu} + \left( \partial_{\gamma} F_{\mu
 
 \subsection{Dipolo magnético}
 
-Se define un dipolo magnético como una distribución idealizada que solo posee momento dipolar no-nulo, es decir $M^{\mu \nu} \neq 0$, $M^{\mu} = 0$ y $M^{\mu \nu \dots \gamma} = 0$. Y que 
+Se define un dipolo magnético como una distribución idealizada que solo posee momento 2-polar no-nulo, es decir $M^{\mu \nu} \neq 0$, $M^{\mu} = 0$ y $M^{\mu \nu \dots \gamma} = 0$.
 
 Podemos calcular la fuerza que experimenta un dipolo magnético producto de un campo magnético externo independiente del tiempo, es decir $\vb{E}=0$. El campo externo es descrito por el tensor de Faraday, mientras que los momentos multipolares describen el dipolo magnético, y la fuerza de Lorentz representa la fuerza que ejerce el campo magnético externo sobre el dipolo.
 
-Al estar considerando $X^{\mu}$ como las coordenadas de la línea de mundo de referencia para describir los elementos de la distribución en cuestión, es necesario notar que al introducir la componente temporal en la formulación, es necesario fijar un tiempo en el cual se realiza esta descripción, dando a entender que para un instante de tiempo $t_0$, la componente $X^0$ siempre igual a las componentes $x^0$ de los puntos que conforman la vecindad de $O$ y así se deduce que $\delta x^0 = 0$, lo cual al introducir en \eqref{eq:109} se obtiene que $M^{\mu 0} = 0$, y al ser un dipolo magnético, entonces $M^{(\mu \nu)} = 0$, teniendo así que solo las componentes con índices espaciales son no-nulas. Luego podemos definir el momento magnético $\mu$ implícitamente como
+Al estar considerando $X^{\mu}$ como las coordenadas de la línea de mundo de referencia para describir los elementos de la distribución en cuestión, es necesario notar que al introducir la componente temporal en la formulación, es necesario fijar un tiempo en el cual se realiza esta descripción, dando a entender que para un instante de tiempo $t_0$, la componente $X^0$ siempre igual a las componentes $x^0$ de los puntos que conforman la vecindad de $O$, deduciendo que $\delta x^0 = 0$, lo cual al introducir en \eqref{eq:109} implica que $M^{\mu 0} = 0$, y al ser un dipolo magnético, entonces $M^{(\mu \nu)} = 0$. Teniendo así que solo las componentes con índices espaciales son no-nulas. 
+
+Luego podemos definir el momento magnético $\mu$ implícitamente como
 \begin{equation}
 \label{eq:110}
 M^{i j} = \epsilon^{i j k} \mu_k.
@@ -289,7 +291,7 @@ lo cual, para un observador co-móvil con el dipolo es
 F^{\mathrm{EM}}_{\mu} = \epsilon^{\gamma \nu \sigma \rho} \partial_{\nu} F_{\mu \sigma} \mu_{\rho} u_{\gamma}.
 \end{equation}
 
-Si deseamos extender el análisis a fin de introducir momentos multipolares de órdenes adicionales en la expansión a partir del dipolar, es posible seguir un desarrollo similar, obteniendo que las ecuaciones de movimiento son
+Si deseamos extender el análisis a fin de introducir momentos multipolares de órdenes adicionales en la expansión a partir del 2-polar, es posible seguir un desarrollo similar, obteniendo que las ecuaciones de movimiento son
 \begin{align}
 \label{eq:111}
 \dv{p_{\mu}}{s} &= -\sum_{n=1}^N \frac{n}{(n+1)!} m^{\nu_1 \nu_2 \dots \nu_n \lambda} \partial_{\mu} \partial_{(\nu_2} \dots \partial_{\nu_n} F_{\nu_1) \lambda},\\
